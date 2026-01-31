@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hire Dee - Business Analyst & Technical Specialist</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Homepage-specific styles */
         .hero {
@@ -77,44 +81,137 @@
         .card a:hover {
             color: #764ba2;
         }
+
+        .intro ul {
+            list-style: none;
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        .intro li::before {
+            content: "✓";
+            color: rgba(47,224,200,0.9); /* your teal accent */
+            margin-right: 0.5em;
+        }
+        
     </style>
 </head>
 <body>
     <div id="header"></div>
-    
-    <div class="container">
-        <div class="hero">
-            <h2>Business Analyst & Technical Specialist</h2>
-            <p class="subtitle">Bridging business needs with technical solutions</p>
-            <div class="intro">
-                <p>I'm a business analyst with a strong technical foundation who specialises in turning complex business requirements into clear, actionable specifications that development teams can build from. With hands-on experience across programming, integrations and system design, I understand both business goals and technical constraints. This helps deliver solutions that work in practice, not just on paper.</p>
-                <br>
-                <p>My approach combines thorough analysis, clear documentation, and practical problem-solving with modern AI-enabled workflows to improve speed and quality. I'm known for catching details early, communicating clearly across technical and non-technical audiences and maintaining a strong focus on real-world outcomes.</p>
-                <br>
-                <p>Whether defining requirements for complex integrations, working through edge cases, or collaborating with developers and stakeholders to ensure successful delivery, I bring a detail-oriented, outcome-focused mindset that helps teams build better solutions faster.</p>
+
+    <!-- Hero -->
+    <section id="top" class="relative overflow-hidden h-[420px] md:h-[520px]">
+        <!-- Background image -->
+        <img
+            src="images/hero-65.jpg"
+            alt="Abstract hex grid background"
+            class="absolute inset-0 w-full h-full object-cover opacity-90"
+        />
+
+        <!-- Overlay gradient for text readability -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/65 via-black/35 to-transparent"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 h-full">
+            <div class="container mx-auto px-4 h-full flex flex-col justify-start pb-10 md:pb-14">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-white">
+                Technical Solutions Specialist
+            </h1>
+            <p class="mt-3 text-lg md:text-xl text-white/90">
+                Providing brilliant technical solutions
+            </p>
             </div>
         </div>
-        
-        <div class="cards">
-            <div class="card">
-                <h3>💼 Core Skills</h3>
-                <p>Business analysis, technical capability, clear documentation, communication, and quality-focused testing. AI-enabled workflows for improved efficiency and outcomes.</p>
-                <a href="skills.html">View All Skills →</a>
-            </div>
-            
-            <div class="card">
-                <h3>🚀 Featured Projects</h3>
-                <p>Scope Builder, Scope Builder API and Auto-Man. Practical solutions built to solve real business problems with clean, maintainable code.</p>
-                <a href="projects.html">View Projects →</a>
-            </div>
-            
-            <div class="card">
-                <h3>🎯 Work Approach</h3>
-                <p>Focused on practical outcomes, clear communication and early problem identification. Known for producing requirements that reduce rework and accelerate delivery.</p>
-                <a href="skills.html">Learn More →</a>
+    </section>
+    <div class="container">
+      <div class="brilliant-box">
+        <div class="brilliant-icon">★</div>
+
+            <div class="brilliant-content">
+                <h3 class="brilliant-title">“What makes a solution brilliant?”</h3>
+                <p class="brilliant-lede">A brilliant solution is one that:</p>
+
+                <ul class="brilliant-list">
+                <li>
+                    <span class="brilliant-tick">✓</span>
+                    <span><strong>Meets the stated need and delivers what was actually requested,</strong> while identifying genuine gaps or improvements early.</span>
+                </li>
+
+                <li>
+                    <span class="brilliant-tick">✓</span>
+                    <span><strong>Is well designed and well built,</strong> with clean, maintainable code that is reliable and reduces ongoing development costs.</span>
+                </li>
+
+                <li>
+                    <span class="brilliant-tick">✓</span>
+                    <span><strong>Is user-friendly and easy to use,</strong> helping users adopt the system and continue using it.</span>
+                </li>
+
+                <li>
+                    <span class="brilliant-tick">✓</span>
+                    <span><strong>Is thoroughly tested,</strong> making it robust and dependable for users.</span>
+                </li>
+                </ul>
             </div>
         </div>
     </div>
+
+    <section class="skills-summary">
+      <div class="wrap">
+        <h2 class="section-title">Core Skills</h2>
+
+        <div class="skills-grid">
+
+          <a class="skill-card" href="skills.html#requirements">
+            <div class="skill-image skill-image-req"></div>
+            <div class="skill-body">
+              <div class="skill-title-row">
+                <span class="skill-icon">📘</span>
+                <h3>Requirements</h3>
+              </div>
+              <p>Translating business needs into clear requirements, user stories and acceptance criteria so developers know exactly what to build.</p>
+              <span class="skill-link">View Requirements →</span>
+            </div>
+          </a>
+
+          <a class="skill-card" href="skills.html#development">
+            <div class="skill-image skill-image-dev"></div>
+            <div class="skill-body">
+              <div class="skill-title-row">
+                <span class="skill-icon">💻</span>
+                <h3>Development</h3>
+              </div>
+              <p>Designing and writing clean, maintainable code with unit testing during development to catch issues early.</p>
+              <span class="skill-link">View Development →</span>
+            </div>
+          </a>
+
+          <a class="skill-card" href="skills.html#testing">
+            <div class="skill-image skill-image-test"></div>
+            <div class="skill-body">
+              <div class="skill-title-row">
+                <span class="skill-icon">🔍</span>
+                <h3>Testing</h3>
+              </div>
+              <p>Independently testing completed features against real-world scenarios to validate behaviour, edge cases and failure paths.</p>
+              <span class="skill-link">View Testing →</span>
+            </div>
+          </a>
+
+          <a class="skill-card" href="skills.html#deployment">            <div class="skill-image skill-image-inst"></div>
+            <div class="skill-body">
+              <div class="skill-title-row">
+                <span class="skill-icon">⬇️</span>
+                <h3>Deployment</h3>
+              </div>
+              <p>Deploying and configuring systems so environments, data and integrations are set up correctly from day one.</p>
+              <span class="skill-link">View Deployment →</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
     
     <div id="footer"></div>
     <script src="includes.js"></script>

@@ -1,10 +1,365 @@
-<header>
-    <nav>
-        <h1>Hire Dee</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="projects.html">Projects</a></li>
-        </ul>
-    </nav>
+<!-- header.html -->
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* -----------------------------
+     Header layout + theme
+     ----------------------------- */
+
+  :root {
+    --page-padding: 32px;
+    --menu-gap: 14px;
+  }
+
+  .hd-header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: linear-gradient(
+        90deg,
+        var(--hd-purple) 0%,
+        var(--hd-aqua) 100%
+    );
+    color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+  }
+
+  .hd-wrap {
+    width: 100%;
+    padding: 14px 62px;
+  }
+
+  .hd-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  /* Left title */
+  .hd-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 800;
+    font-size: 26px;
+    letter-spacing: 0.2px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  /* Right nav */
+  .hd-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    white-space: nowrap;
+  }
+
+  .hd-link,
+  .hd-drop-btn {
+    color: rgba(255,255,255,0.92);
+    text-decoration: none;
+    font-weight: 650;
+    font-size: 15px;
+    line-height: 1;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .hd-link:hover,
+  .hd-drop-btn:hover,
+  .hd-link:focus,
+  .hd-drop-btn:focus {
+    color: #fff;
+    background: rgba(255,255,255,0.10);
+    outline: none;
+  }
+
+  /* Dropdown (desktop) */
+  .hd-drop {
+    position: relative;
+  }
+
+  .hd-caret {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 12px;
+    transform: translateY(-1px);
+    opacity: 0.9;
+  }
+
+  /* Dropdown panel: teal-tinted, not black */
+  .hd-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + var(--menu-gap));   /* single gap */
+    right: 0;
+    min-width: 260px;
+    margin-top: 0;            /* IMPORTANT: remove the second gap */
+
+    background: rgba(15, 111, 126, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+    padding: 8px;
+    box-shadow: 0 0 0 1px rgba(120, 200, 210, 0.30) inset,
+                0 8px 18px rgba(15, 111, 126, 0.18);
+    backdrop-filter: blur(14px);
+  }
+
+  .hd-menu::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(-1 * var(--menu-gap));     /* must match the gap */
+    height: var(--menu-gap);             /* must match the gap */
+  }
+
+  .hd-menu a {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.92);
+    text-decoration: none;
+    font-weight: 650;
+  }
+
+  /* Hover glow */
+  .hd-menu a:hover,
+  .hd-menu a:focus {
+    background: rgba(120, 200, 210, 0.22);      /* aqua glow */
+    box-shadow: 0 0 0 1px rgba(120, 200, 210, 0.25) inset;
+    color: #fff;
+    outline: none;
+  }
+
+  /* "Current selection" glow */
+  .hd-menu a.is-current {
+    background: rgba(120, 200, 210, 0.30);
+    box-shadow:
+      0 0 0 1px rgba(120, 200, 210, 0.35) inset,
+      0 8px 18px rgba(15, 111, 126, 0.25);
+    color: #fff;
+  }
+
+  /* Show dropdown on hover/focus (desktop) */
+  .hd-drop:hover .hd-menu,
+  .hd-drop:focus-within .hd-menu {
+    display: block;
+  }
+
+  /* -----------------------------
+     Mobile
+     ----------------------------- */
+  .hd-burger {
+    display: none;
+    border: 1px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .hd-mobile {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.14);
+  }
+
+  .hd-mobile a,
+  .hd-mobile button {
+    width: 100%;
+    text-align: left;
+    margin: 6px 0;
+  }
+
+  .hd-mobile .hd-menu {
+    position: static;
+    display: none;
+    min-width: unset;
+    margin-top: 6px;
+  }
+
+  .hd-mobile .hd-drop.open .hd-menu {
+    display: block;
+  }
+
+  /* Dropdown panel: teal-tinted, not black */
+  .nav-dropdown,
+  .dropdown-menu {
+    margin-top: 8px;
+    background: rgba(15, 111, 126, 0.28);       /* hero aqua tint */
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 14px;
+    box-shadow:
+      0 12px 30px rgba(0, 0, 0, 0.35),
+      0 0 0 1px rgba(15, 111, 126, 0.18) inset; /* subtle inner edge */
+    backdrop-filter: blur(10px);
+  }
+
+  .nav-dropdown a,
+  .dropdown-menu a {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.92);
+    text-decoration: none;
+    font-weight: 650;
+  }
+
+  /* Hover glow */
+  .nav-dropdown a:hover,
+  .dropdown-menu a:hover {
+    background: rgba(120, 200, 210, 0.22);      /* aqua glow */
+    box-shadow: 0 0 0 1px rgba(120, 200, 210, 0.25) inset;
+  }
+
+  /* "Current selection" glow */
+  .nav-dropdown a.is-current,
+  .dropdown-menu a.is-current {
+    background: rgba(120, 200, 210, 0.30);
+    box-shadow:
+      0 0 0 1px rgba(120, 200, 210, 0.35) inset,
+      0 8px 18px rgba(15, 111, 126, 0.25);
+    color: #fff;
+  }
+
+  .nav-item.has-dropdown > a {
+    background-color: rgba(255, 255, 255, 0.12);
+    border-radius: 999px;
+    padding: 6px 12px;
+  }
+
+  /* Responsive breakpoint */
+  @media (max-width: 900px) {
+    .hd-nav {
+      display: none;
+    }
+    .hd-burger {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hd-mobile.open {
+      display: block;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .hd-wrap {
+      padding: 12px 18px;
+    }
+    .hd-title {
+      font-size: 22px;
+    }
+  }
+</style>
+
+<header class="hd-header">
+  <div class="hd-wrap">
+    <div class="hd-row">
+      <!-- Left -->
+      <a class="hd-title" href="index.html">Hire Dee</a>
+
+      <!-- Right (desktop) -->
+      <nav class="hd-nav" aria-label="Primary navigation">
+        <a class="hd-link" href="index.html">Home</a>
+
+        <div class="hd-drop">
+          <button class="hd-drop-btn" type="button" aria-haspopup="true" aria-expanded="false">
+            Skills <span class="hd-caret">▼</span>
+          </button>
+          <div class="hd-menu" role="menu" aria-label="Skills menu">
+            <a role="menuitem" href="skills.html#requirements">Requirements</a>
+            <a role="menuitem" href="skills.html#development">Development</a>
+            <a role="menuitem" href="skills.html#testing">Testing</a>
+            <a role="menuitem" href="skills.html#installations">Installations</a>
+          </div>
+        </div>
+
+        <div class="hd-drop">
+          <button class="hd-drop-btn" type="button" aria-haspopup="true" aria-expanded="false">
+            Projects <span class="hd-caret">▼</span>
+          </button>
+          <div class="hd-menu" role="menu" aria-label="Projects menu">
+            <a role="menuitem" href="projects.html#bugbounty-scope-builder">Bug Bounty Scope Builder</a>
+            <a role="menuitem" href="projects.html#auto-man">Auto-Man</a>
+            <a role="menuitem" href="projects.html#ruby-cheat-sheet">Ruby Cheat Sheet</a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Mobile burger -->
+      <button id="hdBurger" class="hd-burger" type="button" aria-label="Open menu" aria-expanded="false">
+        ☰ <span style="font-weight:700;">Menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="hdMobile" class="hd-mobile" aria-label="Mobile navigation">
+      <a class="hd-link" href="index.html">Home</a>
+
+      <div class="hd-drop" id="hdMobileSkills">
+        <button class="hd-drop-btn" type="button">
+          Skills <span class="hd-caret">▼</span>
+        </button>
+        <div class="hd-menu">
+          <a href="skills.html#requirements">Requirements</a>
+          <a href="skills.html#development">Development</a>
+          <a href="skills.html#testing">Testing</a>
+          <a href="skills.html#installations">Installations</a>
+        </div>
+      </div>
+
+      <div class="hd-drop" id="hdMobileProjects">
+        <button class="hd-drop-btn" type="button">
+          Projects <span class="hd-caret">▼</span>
+        </button>
+        <div class="hd-menu">
+          <a href="projects.html#bugbounty-scope-builder">Bug Bounty Scope Builder</a>
+          <a href="projects.html#auto-man">Auto-Man</a>
+          <a href="projects.html#ruby-cheat-sheet">Ruby Cheat Sheet</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
+
+<script>
+  (function () {
+    const burger = document.getElementById('hdBurger');
+    const mobile = document.getElementById('hdMobile');
+    const mobileSkills = document.getElementById('hdMobileSkills');
+    const mobileProjects = document.getElementById('hdMobileProjects');
+
+    function toggleMobile() {
+      const open = mobile.classList.toggle('open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    function toggleDrop(drop) {
+      drop.classList.toggle('open');
+    }
+
+    if (burger && mobile) burger.addEventListener('click', toggleMobile);
+
+    if (mobileSkills) {
+      const btn = mobileSkills.querySelector('button');
+      if (btn) btn.addEventListener('click', () => toggleDrop(mobileSkills));
+    }
+
+    if (mobileProjects) {
+      const btn = mobileProjects.querySelector('button');
+      if (btn) btn.addEventListener('click', () => toggleDrop(mobileProjects));
+    }
+  })();
+</script>

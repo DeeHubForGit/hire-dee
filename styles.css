@@ -6,51 +6,45 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: #f5f5f5;
+    color: rgba(255,255,255,0.9);
+    background: #0B0F1A; /* near-black */
 }
 
-/* Header and Navigation */
-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 2rem 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 20% 10%, rgba(52,28,99,0.18), transparent 45%),
+              radial-gradient(circle at 90% 20%, rgba(15,111,126,0.14), transparent 45%);
+  z-index: -1;
 }
 
-nav {
+:root {
+  --hd-purple: rgb(52, 28, 99);   /* hero purple */
+  --hd-aqua: rgb(15, 111, 126);   /* hero aqua */
+  --hd-menu-bg: rgba(52, 28, 99, 0.92); /* dark purple menus */
+  --accent-purple: #7b6fd6;
+}
+
+/* Headings hierarchy */
+h1, h2, h3 {
+  letter-spacing: -0.01em;
+}
+
+/* =====================================================
+   Shared layout wrapper
+   - Use this for header + hero text alignment
+   ===================================================== */
+.wrap {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-nav h1 {
-    font-size: 1.8rem;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    transition: opacity 0.3s;
-}
-
-nav a:hover {
-    opacity: 0.8;
-}
-
-/* Container */
+/* Container (for page sections, NOT header alignment) */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -77,13 +71,22 @@ nav a:hover {
     color: #666;
 }
 
-/* Footer */
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
+.hd-footer {
+  background: linear-gradient(
+    90deg,
+    #341C63 0%,
+    #0F6F7E 100%
+  );
+  color: #ffffff;
+}
+
+.hd-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 14px;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
 
 /* Common Section Styles */
@@ -252,4 +255,256 @@ footer {
 .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* =====================================================
+   Skills Cards
+   ===================================================== */
+
+.section-title {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 0 1.25rem;
+}
+
+.skills-summary {
+  padding: 2.5rem 0 3.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.skill-card {
+  display: block;
+  text-decoration: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.30);
+  backdrop-filter: blur(10px);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.35);
+  border-color: rgba(120, 200, 210, 0.25);
+}
+
+.skill-image {
+  height: 130px;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05);
+}
+
+/* Use gradients instead of photos for now (safe, consistent) */
+.skill-image-req  { background: linear-gradient(135deg, rgba(52,28,99,0.9), rgba(15,111,126,0.65)); }
+.skill-image-dev  { background: linear-gradient(135deg, rgba(15,111,126,0.85), rgba(90,110,255,0.55)); }
+.skill-image-test { background: linear-gradient(135deg, rgba(120,200,210,0.55), rgba(52,28,99,0.85)); }
+.skill-image-inst { background: linear-gradient(135deg, rgba(52,28,99,0.85), rgba(30,50,80,0.75)); }
+
+.skill-body {
+  padding: 18px 18px 16px;
+}
+
+.skill-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.skill-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.skill-body h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.skill-body p {
+  margin: 0 0 14px;
+  color: rgba(255,255,255,0.9);
+  line-height: 1.55;
+  font-size: 0.98rem;
+}
+
+.skill-link {
+  display: inline-block;
+  color: rgba(120, 200, 210, 0.95);
+  font-weight: 700;
+}
+
+/* =====================================================
+   Intro "What makes a solution brilliant?" section
+   ===================================================== */
+
+.intro {
+    max-width: 780px;
+}
+
+.intro h3 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.intro p {
+    color: rgba(255,255,255,0.85);
+}
+
+.intro li {
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 0.6rem;
+}
+
+/* =====================================================
+   Brilliant Solution Box (isolated component)
+   ===================================================== */
+
+.brilliant-box {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 26px;
+  border-radius: 20px;
+
+  background: rgba(10, 18, 32, 0.75);
+  backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 0 0 1px rgba(123, 111, 214, 0.25),
+    0 0 32px rgba(123, 111, 214, 0.25),
+    0 18px 40px rgba(0, 0, 0, 0.55);
+}
+
+.brilliant-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+
+  background: rgba(123, 111, 214, 0.18);
+  color: #9a8cff;
+  font-size: 22px;
+  line-height: 1;
+  flex: 0 0 auto;
+
+  box-shadow:
+    0 0 0 1px rgba(123, 111, 214, 0.35),
+    0 0 16px rgba(123, 111, 214, 0.45);
+}
+
+.brilliant-content {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.brilliant-title {
+  margin: 0 0 10px;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: var(--accent-purple);
+  opacity: 0.95;
+}
+
+.brilliant-lede {
+  margin: 0 0 16px;
+  font-size: 1.1rem;
+  font-weight: 650;
+  color: rgba(255,255,255,0.92);
+}
+
+/* List: bullet + text, always wraps correctly */
+.brilliant-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.brilliant-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.6;
+}
+
+.brilliant-tick {
+  flex: 0 0 18px;
+  color: rgba(47,224,200,0.9);
+  line-height: 1.6;
+  transform: translateY(1px);
+}
+
+.brilliant-list strong {
+  color: rgba(255,255,255,0.96);
+  font-weight: 800;
+}
+
+/* =====================================================
+   Skill Card Images (placeholders)
+   ===================================================== */
+
+.skill-image {
+  height: 240px;
+  border-radius: 18px 18px 0 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Placeholder images – replace filenames later */
+
+.skill-image-req {
+  background-image: url("images/requirements.jpg");
+}
+
+.skill-image-dev {
+  background-image: url("images/development.jpg");
+}
+
+.skill-image-test {
+  background-image: url("images/testing.png");
+}
+
+.skill-image-inst {
+  background-image: url("images/deployment.png");
+}
+
+.section-title {
+  position: relative;
+  color: var(--accent-purple);
+  margin-top: 3rem;
+}
+
+.section-title::before,
+.section-title::after,
+.skills-summary::before,
+.skills-summary::after {
+  content: none !important;
+  display: none !important;
 }

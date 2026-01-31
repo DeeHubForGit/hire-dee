@@ -5,7 +5,12 @@ function loadPartial(url, elementId) {
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             if (xhr.status === 200 || xhr.status === 0) { // 0 for local files
-                document.getElementById(elementId).innerHTML = xhr.responseText;
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.innerHTML = xhr.responseText;
+                } else {
+                    console.error(`Element with id '${elementId}' not found`);
+                }
             } else {
                 console.error(`Error loading ${url}:`, xhr.status);
             }
