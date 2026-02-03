@@ -27,6 +27,7 @@ body::before {
   --hd-aqua: rgb(15, 111, 126);   /* hero aqua */
   --hd-menu-bg: rgba(52, 28, 99, 0.92); /* dark purple menus */
   --accent-purple: #7b6fd6;
+  --accent-teal: rgba(120, 200, 210, 0.95);
 }
 
 /* Headings hierarchy */
@@ -106,24 +107,30 @@ h1, h2, h3 {
 
 /* Common Section Styles */
 .section {
-    background: white;
-    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 18px;
     padding: 2.5rem;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 14px 34px rgba(0,0,0,0.35);
+    backdrop-filter: blur(12px);
 }
 
 .section h3 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-    border-bottom: 3px solid #667eea;
-    padding-bottom: 0.5rem;
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin-bottom: 1.25rem;
+    border-bottom: 2px solid rgba(123,111,214,0.6);
+    padding-bottom: 0.4rem;
+}
+
+.section p,
+.section li {
+    color: rgba(255,255,255,0.85);
 }
 
 .section p {
     font-size: 1.05rem;
-    color: #555;
     line-height: 1.8;
     margin-bottom: 1rem;
 }
@@ -134,7 +141,6 @@ h1, h2, h3 {
 }
 
 .section li {
-    color: #555;
     margin-bottom: 0.7rem;
     line-height: 1.7;
     font-size: 1.05rem;
@@ -173,22 +179,24 @@ h1, h2, h3 {
 
 /* Project Header (for project detail pages) */
 .project-header {
-    background: white;
-    border-radius: 12px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 18px;
     padding: 3rem;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+    backdrop-filter: blur(14px);
 }
 
 .project-header h2 {
-    font-size: 2.5rem;
-    color: #667eea;
+    font-size: 2.4rem;
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
 .project-header .subtitle {
-    font-size: 1.3rem;
-    color: #555;
+    font-size: 1.15rem;
+    color: rgba(255,255,255,0.85);
     margin-bottom: 2rem;
     line-height: 1.7;
 }
@@ -201,21 +209,25 @@ h1, h2, h3 {
 
 /* Strength Card (for project detail pages) */
 .strength-card {
-    background: #f8f9ff;
-    border-left: 4px solid #667eea;
+    background: rgba(255,255,255,0.06);
+    border-left: 4px solid var(--accent-purple);
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 8px;
 }
 
 .strength-card h4 {
-    color: #667eea;
+    color: #ffffff;
     font-size: 1.3rem;
     margin-bottom: 0.8rem;
 }
 
+.strength-card p,
+.strength-card li {
+    color: rgba(255,255,255,0.85);
+}
+
 .strength-card p {
-    color: #555;
     line-height: 1.7;
     margin-bottom: 0.5rem;
 }
@@ -226,7 +238,6 @@ h1, h2, h3 {
 }
 
 .strength-card li {
-    color: #555;
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 0.4rem;
@@ -234,21 +245,21 @@ h1, h2, h3 {
 
 /* Highlight Box (for project detail pages) */
 .highlight-box {
-    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+    background: rgba(123,111,214,0.10);
     border-radius: 8px;
     padding: 2rem;
     margin-top: 1.5rem;
 }
 
 .highlight-box h4 {
-    color: #667eea;
+    color: #ffffff;
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
 .highlight-box p {
     font-size: 1.1rem;
-    color: #555;
+    color: rgba(255,255,255,0.85);
     line-height: 1.8;
     margin-bottom: 0.8rem;
 }
@@ -374,6 +385,99 @@ h1, h2, h3 {
   color: rgba(255,255,255,0.9);
 }
 
+/* =====================================================
+   Projects Summary
+   ===================================================== */
+
+.projects-summary {
+  padding: 32px 0 70px;
+}
+
+.section-subtitle {
+  margin: 10px 0 0;
+  color: rgba(255,255,255,0.7);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 760px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 26px;
+}
+
+.project-card {
+  display: block;
+  text-decoration: none;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.16);
+}
+
+.project-card-body {
+  padding: 22px 22px 20px;
+}
+
+.project-card h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.project-card p {
+  margin: 12px 0 0;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.6;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.project-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-weight: 800;
+  color: var(--accent-teal);
+}
+
+.project-image {
+  filter: brightness(0.96) contrast(0.98);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* =====================================================
    Intro "What makes a solution brilliant?" section
