@@ -11,86 +11,41 @@
     <div id="header"></div>
     
     <div class="container">
-        <a href="projects.html" class="back-link">← Back to Projects</a>
+        <a href="project-scope-builder.html" class="back-link">← Back to Scope Builder</a>
         
         <div class="project-header">
             <h2>🔌 Bug Bounty Scope Builder API</h2>
-            <p class="subtitle">A backend API designed to generate clear, defensible bug bounty scope documents by combining automation, heuristics and AI.</p>
-            <p class="intro">Reduces manual effort while keeping humans firmly in control of decisions.</p>
+            <p class="subtitle">Backend API for discovering mobile applications and API assets associated with a company domain.</p>
+            <p class="intro">Designed to support bug bounty and security programs by automating asset discovery and returning deterministic asset data for scope definition.</p>
             <div class="tech-stack">
                 <span class="tech-badge">Backend API</span>
                 <span class="tech-badge">AI Integration</span>
                 <span class="tech-badge">System Architecture</span>
                 <span class="tech-badge">Security</span>
-                <span class="tech-badge">Configuration-Driven</span>
             </div>
         </div>
         
         <div class="section">
-            <h3>What It Does</h3>
-            <p>Accepts a company domain and builds a structured security testing scope across:</p>
-            <ul>
-                <li>Websites and subdomains</li>
-                <li>APIs and documentation endpoints</li>
-                <li>Mobile applications (iOS and Android)</li>
+            <h2>What It Does</h2>
+            <ul class="feature-list">
+                <li>Retrieves <strong>mobile applications (iOS and Android)</strong> associated with a company</li>
+                <li>Identifies <strong>API endpoints and related assets</strong> for a given URL</li>
+                <li>Returns <strong>structured, explainable asset data</strong> suitable for downstream scope definition</li>
             </ul>
-            <p>Produces consistent, explainable outputs suitable for security programs and auditors.</p>
+
+            <p class="note">
+                <strong>Note:</strong> This API does not generate scope documents. It provides the asset intelligence needed to define scope accurately.
+            </p>
         </div>
         
         <div class="section">
-            <h3>Key Design Strengths</h3>
-            
-            <div class="strength-card">
-                <h4>Subdomain Intelligence, Not Just Discovery</h4>
-                <p>Uses Subfinder for discovery, then filters, normalises, groups and enriches results so they are meaningful for downstream decisions rather than raw lists.</p>
-            </div>
-            
-            <div class="strength-card">
-                <h4>AI Guided by Structure and Constraints</h4>
-                <p>AI is used after data has been cleaned, deduplicated and framed. This dramatically improves recommendation quality and avoids "AI guesswork."</p>
-            </div>
-            
-            <div class="strength-card">
-                <h4>Mobile App Discovery with Controlled Ambiguity</h4>
-                <p>App store searches are inherently noisy. To manage this, the API supports multiple explicit search modes:</p>
-                <ul>
-                    <li><strong>APP NAME</strong> - Search by application name only</li>
-                    <li><strong>DEVELOPER</strong> - Search by developer/publisher</li>
-                    <li><strong>EITHER</strong> - Broader discovery (match either criteria)</li>
-                    <li><strong>BOTH</strong> - Precision matching (match both criteria)</li>
-                </ul>
-                <p>This makes the trade-offs visible instead of hiding them behind a single opaque search.</p>
-            </div>
-            
-            <div class="strength-card">
-                <h4>Shared Architecture Across Platforms</h4>
-                <p>Initial AI-generated implementations for iOS and Android diverged. The solution was refactored to use a shared delegate pattern:</p>
-                <ul>
-                    <li>Reduced duplication and cut the codebase from ~300 lines to ~150</li>
-                    <li>Improved maintainability</li>
-                    <li>Prevented platform-specific design drift</li>
-                </ul>
-            </div>
-            
-            <div class="strength-card">
-                <h4>Heuristics Before AI for API Discovery</h4>
-                <p>Likely API and documentation endpoints are identified, grouped and scored first. AI is then used to refine naming and recommendations, not to blindly search the web.</p>
-            </div>
-            
-            <div class="strength-card">
-                <h4>Config-Driven and Extensible</h4>
-                <p>Behaviour is controlled via configuration rather than hard-coded rules, making the system easy to evolve, test and extend without breaking existing logic.</p>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h3>Why It Matters</h3>
-            <div class="highlight-box">
-                <h4>Architectural Control with AI</h4>
-                <p>This project demonstrates strong architectural control when working with AI: knowing when to lean on automation, when to constrain it and when to override it with deliberate design decisions.</p>
-                <p>The result is a system that is reliable, explainable and practical in real-world security programs.</p>
-                <p>Rather than treating AI as a magic solution, this API shows how to combine deterministic logic, structured data and constrained AI reasoning to produce consistent, defensible outputs that security teams can trust.</p>
-            </div>
+            <h2>Key Technical Decisions</h2>
+            <ul class="feature-list">
+                <li><strong>Deterministic discovery first:</strong>  Asset retrieval uses explicit logic and heuristics before any AI involvement</li>
+                <li><strong>Controlled AI usage:</strong>  AI is used only where reasoning is required, not for guessing or discovery</li>
+                <li><strong>Shared mobile discovery architecture:</strong>  iOS and Android logic implemented via a shared delegate pattern to reduce duplication and keep behaviour consistent</li>
+                <li><strong>Config-driven behaviour:</strong>  Discovery rules and thresholds are configurable, allowing safe extension without breaking existing logic</li>
+            </ul>
         </div>
     </div>
     
