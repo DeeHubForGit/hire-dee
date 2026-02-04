@@ -155,12 +155,13 @@ h1, h2, h3 {
 }
 
 .tech-badge {
-    background: #667eea;
-    color: white;
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
+  background: rgba(120, 140, 255, 0.18);
+  border: 1px solid rgba(120, 140, 255, 0.25);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  pointer-events: none; /* makes them feel non-interactive */
 }
 
 /* Back Link */
@@ -203,8 +204,9 @@ h1, h2, h3 {
 
 .project-header .intro {
     font-size: 1.1rem;
-    color: #666;
+    color: rgba(255,255,255,0.75);
     line-height: 1.8;
+    max-width: none;
 }
 
 /* Strength Card (for project detail pages) */
@@ -245,9 +247,8 @@ h1, h2, h3 {
 
 /* Highlight Box (for project detail pages) */
 .highlight-box {
-    background: rgba(123,111,214,0.10);
-    border-radius: 8px;
-    padding: 2rem;
+    background: none;
+    padding: 0;
     margin-top: 1.5rem;
 }
 
@@ -466,10 +467,45 @@ h1, h2, h3 {
   margin-top: 14px;
   font-weight: 800;
   color: var(--accent-teal);
+  text-decoration: none;
+}
+
+.project-link,
+.project-link:hover {
+  text-decoration: none;
 }
 
 .project-image {
   filter: brightness(0.96) contrast(0.98);
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.project-logo {
+  height: 32px;     /* control size */
+  width: auto;      /* preserve aspect ratio */
+  flex-shrink: 0;
+}
+
+.project-link-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 16px;
+  background: rgba(120, 140, 255, 0.28);
+  color: #ffffff;
+  border: 1px solid rgba(120, 140, 255, 0.5);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.project-link-button:hover {
+  background: rgba(120, 140, 255, 0.25);
 }
 
 /* Responsive */
@@ -477,6 +513,76 @@ h1, h2, h3 {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Mobile responsive styles for project pages */
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .project-header {
+    padding: 1.5rem;
+  }
+
+  .project-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .project-header .subtitle,
+  .project-header .intro {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+
+  .section h3 {
+    font-size: 1.4rem;
+  }
+
+  .tech-stack {
+    flex-wrap: wrap;
+  }
+
+  .brilliant-box {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .brilliant-title {
+    font-size: 1.4rem;
+  }
+
+  .brilliant-lede {
+    font-size: 1rem;
+  }
+}
+
+/* Screenshot grid and images */
+.screenshot-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.screenshot {
+  margin: 0;
+}
+
+.screenshot img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.screenshot figcaption {
+  margin-top: 10px;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.95rem;
+  font-style: italic;
 }
 
 /* =====================================================

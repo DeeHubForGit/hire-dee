@@ -11,88 +11,49 @@
     <div id="header"></div>
     
     <div class="container">
-        <a href="projects.html" class="back-link">← Back to Projects</a>
+        <a href="index.html" class="back-link">← Back to Home</a>
         
         <div class="project-header">
-            <h2>🛠️ AI-Assisted Scope Document Builder (Bugbop)</h2>
-            <p class="subtitle">Designed and built an AI-assisted web application that generates high-quality bug bounty scope documents from a company domain.</p>
-            <p class="intro">The tool automates what is normally a manual, error-prone process by combining deterministic data retrieval with carefully constrained AI reasoning.</p>
+            <h2>🛠️ Scope Document Builder</h2>
+            <p class="subtitle">Web application that retrieves mobile apps and APIs using a custom-built API,
+            then constructs a bug bounty program scope from the URL, discovered assets and selected rewards.</p>
+            <p class="intro">Reduces manual reconnaissance effort, produces more accurate scopes and demonstrates disciplined AI-assisted development with strong architectural control.</p>
+            <a href="project-scope-builder-api.html" class="project-link">
+                View Supporting API Project →
+            </a>
+
             <div class="tech-stack">
-                <span class="tech-badge">AI Integration</span>
-                <span class="tech-badge">API Design</span>
                 <span class="tech-badge">Web Development</span>
                 <span class="tech-badge">System Architecture</span>
                 <span class="tech-badge">Configuration-Driven Design</span>
             </div>
         </div>
-        
+
         <div class="section">
-            <h3>What It Does</h3>
-            <ul>
-                <li>Retrieves subdomains, mobile applications and API endpoints for a target organisation</li>
-                <li>Uses heuristics first, then AI, to produce accurate and practical scope recommendations</li>
-                <li>Generates a structured, ready-to-use bug bounty scope document via a guided UI</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h3>Key Technical Strengths Demonstrated</h3>
-            
-            <div class="strength-card">
-                <h4>API Design & Ownership</h4>
-                <p>Built and used my own API after years of integrating with third-party APIs, gaining full end-to-end visibility into API design, validation and error handling.</p>
+            <h3>Screenshots</h3>
+
+            <div class="screenshot-grid">
+                <figure class="screenshot">
+                <figcaption>Main page: URL input and reward tier selection</figcaption>
+                <img src="images/scope-builder-page-1.png" alt="Scope builder main page showing URL input and reward tiers">
+                </figure>
+
+                <figure class="screenshot">
+                <figcaption>Program Data: mobile apps and API recommendation</figcaption>
+                <img src="images/scope-builder-program-data-1.png" alt="Program Data modal showing mobile apps and API recommendation">
+                </figure>
+                <figure class="screenshot">
+                <img src="images/scope-builder-program-data-2.png" alt="Program Data modal showing suggested and alternative mobile apps">
+                </figure>
+                
+                <figure class="screenshot">
+                <figcaption>Generated scope: in-scope assets and rewards inserted into template</figcaption>
+                <img src="images/scope-builder-page2.png" alt="Scope review page showing generated scope content in editor">
+                </figure>
+                <figure class="screenshot">
+                <img src="images/scope-builder-page2-2.png" alt="Scope review page showing generated scope content in editor">
+                </figure>
             </div>
-            
-            <div class="strength-card">
-                <h4>AI with Architectural Control</h4>
-                <p>AI is used where it adds value, not as a black box. Inputs are cleaned, constrained and structured to produce reliable outputs.</p>
-            </div>
-            
-            <div class="strength-card">
-                <h4>Complex Mobile App Discovery Logic</h4>
-                <p>App store searches are inconsistent across regions and platforms.</p>
-                <ul>
-                    <li>Designed multiple search modes (APP NAME, DEVELOPER, EITHER, BOTH) to balance recall and accuracy across iOS and Android</li>
-                    <li>Handles platform-specific quirks and edge cases systematically</li>
-                </ul>
-            </div>
-            
-            <div class="strength-card">
-                <h4>Shared Logic & Maintainability</h4>
-                <p>When AI produced near-duplicate logic for iOS and Android, I stepped in to introduce a shared delegate.</p>
-                <ul>
-                    <li>Reduced code size by ~50%</li>
-                    <li>Prevented long-term design drift</li>
-                    <li>Improved maintainability and consistency</li>
-                </ul>
-            </div>
-            
-            <div class="strength-card">
-                <h4>Configuration-Driven Design</h4>
-                <p>Behaviour is driven by configuration files rather than hard-coded rules, making the system easier to extend, tune and maintain.</p>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h3>Why It Matters</h3>
-            <div class="highlight-box">
-                <h4>Real Business Impact</h4>
-                <p><strong>Reduces manual effort and cognitive load</strong> for security teams by automating repetitive reconnaissance work.</p>
-                <p><strong>Produces more accurate scopes</strong> by combining business context, technical heuristics and AI reasoning in a structured way.</p>
-                <p><strong>Demonstrates strong technical business analysis</strong>, system design and AI-assisted development discipline. Shows how to use AI effectively while maintaining control over architecture, quality and maintainability.</p>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h3>Technical Approach</h3>
-            <p>This project showcases a pragmatic approach to AI integration:</p>
-            <ul>
-                <li><strong>Deterministic first:</strong> Use reliable, rule-based logic wherever possible</li>
-                <li><strong>AI where valuable:</strong> Apply AI for pattern recognition and context-aware decisions</li>
-                <li><strong>Constrained inputs:</strong> Clean and structure data before feeding it to AI</li>
-                <li><strong>Human oversight:</strong> Review AI outputs and step in when architecture matters</li>
-                <li><strong>Maintainable design:</strong> Prioritise code quality and long-term maintainability over quick wins</li>
-            </ul>
         </div>
     </div>
     
