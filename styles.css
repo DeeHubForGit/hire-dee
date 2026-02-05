@@ -108,15 +108,27 @@ h1, h2, h3 {
 /* Common Section Styles */
 .section {
     background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(123, 111, 214, 0.35);
     border-radius: 18px;
     padding: 2.5rem;
     margin-bottom: 2rem;
+    position: relative;
     box-shadow: 
-        0 0 0 1px rgba(123, 111, 214, 0.4) inset,
         0 0 32px rgba(123, 111, 214, 0.35),
         0 14px 34px rgba(0,0,0,0.35);
     backdrop-filter: blur(12px);
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    padding: 2px;
+    background: linear-gradient(135deg, #8b5cf6, #22d3ee);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
 }
 
 .section h3 {
@@ -184,15 +196,27 @@ h1, h2, h3 {
 /* Project Header (for project detail pages) */
 .project-header {
     background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(123, 111, 214, 0.35);
     border-radius: 18px;
     padding: 3rem;
     margin-bottom: 2rem;
+    position: relative;
     box-shadow: 
-        0 0 0 1px rgba(123, 111, 214, 0.4) inset,
         0 0 32px rgba(123, 111, 214, 0.35),
         0 16px 40px rgba(0,0,0,0.35);
     backdrop-filter: blur(14px);
+}
+
+.project-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    padding: 2px;
+    background: linear-gradient(135deg, #8b5cf6, #22d3ee);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
 }
 
 .project-header h2 {
@@ -323,22 +347,32 @@ h1, h2, h3 {
   border-radius: 18px;
   overflow: hidden;
   background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(123, 111, 214, 0.35);
+  position: relative;
   box-shadow: 
-    0 0 0 1px rgba(123, 111, 214, 0.4) inset,
     0 0 32px rgba(123, 111, 214, 0.35),
     0 10px 24px rgba(0,0,0,0.30);
   backdrop-filter: blur(10px);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 2px;
+  background: linear-gradient(135deg, #8b5cf6, #22d3ee);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 .skill-card:hover {
   transform: translateY(-2px);
   box-shadow: 
-    0 0 0 1px rgba(120, 200, 210, 0.5) inset,
     0 0 48px rgba(120, 200, 210, 0.45),
     0 14px 34px rgba(0,0,0,0.35);
-  border-color: rgba(120, 200, 210, 0.5);
 }
 
 /* Card behaviour: clickable vs non-clickable */
@@ -349,8 +383,9 @@ h1, h2, h3 {
 /* Disable hover lift/glow for non-clickable cards */
 .is-static:hover {
   transform: none !important;
-  border-color: inherit !important;
-  box-shadow: inherit !important;
+  box-shadow: 
+    0 0 32px rgba(123, 111, 214, 0.35),
+    0 10px 24px rgba(0,0,0,0.30) !important;
 }
 
 .skill-image {
@@ -438,20 +473,30 @@ h1, h2, h3 {
   text-decoration: none;
   border-radius: 18px;
   background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(123, 111, 214, 0.35);
+  position: relative;
   box-shadow: 
-    0 0 0 1px rgba(123, 111, 214, 0.4) inset,
     0 0 32px rgba(123, 111, 214, 0.35),
     0 16px 40px rgba(0,0,0,0.35);
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 2px;
+  background: linear-gradient(135deg, #8b5cf6, #22d3ee);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 .project-card:hover {
   transform: translateY(-2px);
   box-shadow: 
-    0 0 0 1px rgba(120, 200, 210, 0.5) inset,
     0 0 48px rgba(120, 200, 210, 0.45),
     0 16px 40px rgba(0,0,0,0.35);
-  border-color: rgba(120, 200, 210, 0.5);
 }
 
 .project-card-body {
