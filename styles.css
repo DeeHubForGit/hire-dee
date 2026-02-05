@@ -698,9 +698,27 @@ h1, h2, h3 {
   backdrop-filter: blur(16px);
 
   box-shadow:
-    0 0 0 1px rgba(123, 111, 214, 0.25),
-    0 0 32px rgba(123, 111, 214, 0.25),
-    0 18px 40px rgba(0, 0, 0, 0.55);
+    0 0 0 1px rgba(123, 111, 214, 0.45),
+    0 0 56px rgba(123, 111, 214, 0.55),
+    0 0 96px rgba(120, 200, 210, 0.22),
+    0 24px 56px rgba(0, 0, 0, 0.65);
+}
+
+.brilliant-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(123, 111, 214, 0.9),
+    rgba(123, 111, 214, 0.6)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 .brilliant-icon {
