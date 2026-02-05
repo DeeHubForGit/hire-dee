@@ -214,6 +214,12 @@
       </div>
     </section>
 
+    <section class="contact-section">
+      <div class="wrap">
+        <button id="contactBtn" class="contact-btn">Contact</button>
+      </div>
+    </section>
+
     <section class="projects-summary">
       <div class="wrap">
         <h2 class="section-title">Featured Projects</h2>
@@ -255,5 +261,16 @@
     
     <div id="footer"></div>
     <script src="includes.js"></script>
+    <script>
+      const contactBtn = document.getElementById('contactBtn');
+
+      if (contactBtn) {
+        contactBtn.addEventListener('click', () => {
+          const user = 'd' + 'e' + 'e' + '_' + 'b' + 'a' + 't' + 'h';
+          const domain = 'hotmail' + '.' + 'com';
+          window.location.href = `mailto:${user}@${domain}?subject=Hire Dee enquiry`;
+        });
+      }
+    </script>
 </body>
 </html>

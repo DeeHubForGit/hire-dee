@@ -302,7 +302,7 @@ h1, h2, h3 {
 }
 
 .skills-summary {
-  padding: 2.5rem 0 3.5rem;
+  padding: 1.5rem 0 3.5rem;
 }
 
 .skills-grid {
@@ -751,6 +751,35 @@ h1, h2, h3 {
 .skills-summary::after {
   content: none !important;
   display: none !important;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 0rem 0;
+  text-align: center;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 16px 48px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #8b5cf6 0%, #22d3ee 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+}
+
+.contact-btn:active {
+  transform: translateY(0);
 }
 
 .hd-mobile-inline {
