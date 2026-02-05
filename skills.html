@@ -7,38 +7,41 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Skills page-specific styles */
-        .skill-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2.5rem;
+        /* Skills page-specific card styling */
+        .skill-card.is-static {
+            padding: 2rem;
             margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
         }
         
-        .skill-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        /* Ensure no hover effects on skills page */
+        .skill-card.is-static:hover {
+            transform: none !important;
+            border-color: rgba(123, 111, 214, 0.35) !important;
+            box-shadow: 
+                0 0 0 1px rgba(123, 111, 214, 0.4) inset,
+                0 0 32px rgba(123, 111, 214, 0.35),
+                0 10px 24px rgba(0,0,0,0.30) !important;
         }
         
-        .skill-card h3 {
+        .skill-card.is-static h3 {
             font-size: 1.8rem;
-            color: #333;
-            margin-bottom: 1.5rem;
+            color: #ffffff;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
+            border-bottom: none;
         }
         
-        .skill-card h3 .emoji {
+        .skill-card.is-static h3 .emoji {
             font-size: 2rem;
         }
         
-        .skill-card p {
+        .skill-card.is-static p {
             font-size: 1.05rem;
-            color: #555;
-            line-height: 1.8;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.7;
+            margin: 0;
         }
     </style>
 </head>
@@ -54,52 +57,52 @@
     
     <div class="container">
         <a href="index.html" class="back-link"><span class="back-arrow">◀</span> Back to Home</a>
-        <div class="skill-card" id="requirements">
+        <div class="skill-card is-static" id="requirements">
             <h3><span class="emoji">🧠</span> Business Analysis & Requirements</h3>
             <p>Strong at defining clear, actionable requirements for complex systems. Comfortable working with integrations, APIs and edge cases and translating business needs into specifications that developers can actually build from. Known for producing requirements that reduce rework and speed up delivery.</p>
         </div>
 
-        <div class="skill-card" id="development">
+        <div class="skill-card is-static" id="development">
             <h3><span class="emoji">💻</span> Development</h3>
             <p>Hands-on development experience across VB6, C#, Web and backend systems. Builds production-ready features with a strong focus on correct requirements implementation and maintainability. Uses AI to accelerate development without compromising design quality.</p>
         </div>
 
-        <div class="skill-card" id="testing">
+        <div class="skill-card is-static" id="testing">
             <h3><span class="emoji">🧪</span> Testing & Quality Mindset</h3>
             <p>Thorough and methodical tester with a strong focus on real-world behaviour and edge cases. Works closely with internal testers to ensure solutions meet business intent and behave correctly in production.</p>
         </div>
 
-        <div class="skill-card" id="deployment">
+        <div class="skill-card is-static" id="deployment">
             <h3><span class="emoji">⬆️</span> Deployment</h3>
             <p>Deploying and configuring systems so environments, data and integrations are set up correctly from day one.</p>
         </div>
         
-        <div class="skill-card" id="writing">
+        <div class="skill-card is-static" id="writing">
             <h3><span class="emoji">✍️</span> Writing & Documentation</h3>
             <p>Clear, concise writer who produces easy-to-understand documentation, release notes and help text. Able to adapt to different formats quickly when given a good example. Writing is used as a tool to reduce confusion, support adoption and improve outcomes.</p>
         </div>
         
-        <div class="skill-card" id="communication">
+        <div class="skill-card is-static" id="communication">
             <h3><span class="emoji">🗣</span> Communication</h3>
             <p>Clear, practical communicator who explains technical concepts in plain language. Comfortable answering questions using examples, visuals and step-by-step explanations to ensure shared understanding across technical and non-technical audiences.</p>
         </div>
         
-        <div class="skill-card" id="attention-to-detail">
+        <div class="skill-card is-static" id="attention-to-detail">
             <h3><span class="emoji">🔎</span> Attention to Detail</h3>
             <p>Naturally detail-oriented, with mistakes, inconsistencies and gaps standing out quickly. This supports high-quality requirements, testing, documentation and review work, and helps catch issues early before they become costly.</p>
         </div>
         
-        <div class="skill-card" id="collaboration">
+        <div class="skill-card is-static" id="collaboration">
             <h3><span class="emoji">🤝</span> Collaboration</h3>
             <p>Works well with developers, testers, stakeholders and clients. Known as approachable, reliable and easy to work with, while still maintaining high standards and clear expectations.</p>
         </div>
         
-        <div class="skill-card" id="ai-enabled-work">
+        <div class="skill-card is-static" id="ai-enabled-work">
             <h3><span class="emoji">🤖</span> AI-Enabled Work</h3>
             <p>Uses AI to speed up writing, review test plans and provide fast access to answers, improving efficiency and throughput across analysis, development and testing.</p>
         </div>
         
-        <div class="skill-card" id="process-improvement">
+        <div class="skill-card is-static" id="process-improvement">
             <h3><span class="emoji">⚙️</span> Process Improvement & Automation</h3>
             <p>Identifies inefficient or manual processes and improves them through better system design, automation and practical tooling.</p>
         </div>
