@@ -239,18 +239,25 @@
     padding: 6px 12px;
   }
 
+  /* Mobile inline navigation - hide it */
+  .hd-mobile-inline {
+    display: none;
+  }
+
   /* Responsive breakpoint */
   @media (max-width: 900px) {
     .hd-nav {
-      display: none;
+      display: flex; /* Keep dropdown navigation visible on mobile */
+      gap: 16px;
+    }
+    .hd-home-link {
+      display: none; /* Hide Home link on mobile */
     }
     .hd-burger {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      display: none; /* Hide the menu button */
     }
-    .hd-mobile.open {
-      display: block;
+    .hd-mobile {
+      display: none; /* Hide the old mobile menu */
     }
   }
 
@@ -272,7 +279,7 @@
 
       <!-- Right (desktop) -->
       <nav class="hd-nav" aria-label="Primary navigation">
-        <a class="hd-link" href="index.html">Home</a>
+        <a class="hd-link hd-home-link" href="index.html">Home</a>
 
         <div class="hd-drop">
           <button class="hd-drop-btn" type="button" aria-haspopup="true" aria-expanded="false">
@@ -298,9 +305,14 @@
           </button>
           <div class="hd-menu" role="menu" aria-label="Projects menu">
             <a role="menuitem" href="project-scope-builder.html">Bug Bounty Scope Builder</a>
-            <a role="menuitem" href="project-auto-man.html">Auto-Man</a>
+            <a role="menuitem" href="project-auto-man.html">Auto-Man Website</a>
           </div>
         </div>
+      </nav>
+
+      <nav class="hd-mobile-inline">
+        <a class="hd-link" href="skills.html">Skills</a>
+        <a class="hd-link" href="projects.html">Projects</a>
       </nav>
 
       <!-- Mobile burger -->
@@ -337,7 +349,7 @@
         </button>
         <div class="hd-menu">
           <a href="project-scope-builder.html">Bug Bounty Scope Builder</a>
-          <a href="project-auto-man.html">Auto-Man</a>
+          <a href="project-auto-man.html">Auto-Man Website</a>
         </div>
       </div>
     </div>

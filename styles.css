@@ -723,3 +723,15 @@ h1, h2, h3 {
   content: none !important;
   display: none !important;
 }
+
+.hd-mobile-inline {
+  display: none;
+  gap: 14px;
+}
+
+@media (max-width: 900px) {
+  .hd-mobile-inline {
+    display: flex;
+    align-items: center;
+  }
+}
