@@ -170,13 +170,30 @@ h1, h2, h3 {
 }
 
 .tech-badge {
-  background: rgba(120, 140, 255, 0.18);
-  border: 1px solid rgba(120, 140, 255, 0.25);
-  color: #ffffff;
-  padding: 6px 14px;
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 14px;
   border-radius: 999px;
+
   font-size: 0.9rem;
-  pointer-events: none; /* makes them feel non-interactive */
+  font-weight: 700;
+  color: rgba(255,255,255,0.92);
+
+  /* Soft but visible purple */
+  background: linear-gradient(
+    135deg,
+    rgba(123, 111, 214, 0.35),
+    rgba(123, 111, 214, 0.20)
+  );
+
+  border: 1px solid rgba(123, 111, 214, 0.6);
+
+  /* Gentle presence, not button energy */
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.06),
+    0 0 18px rgba(123, 111, 214, 0.28);
+
+  pointer-events: none; /* stays non-interactive */
 }
 
 /* Back Link */
@@ -517,24 +534,6 @@ h1, h2, h3 {
   line-height: 1.6;
 }
 
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 14px;
-}
-
-.project-tag {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 13px;
-  font-weight: 700;
-  color: rgba(255,255,255,0.85);
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.10);
-}
 
 .project-link {
   display: inline-block;
@@ -856,3 +855,4 @@ h1, h2, h3 {
     align-items: center;
   }
 }
+
