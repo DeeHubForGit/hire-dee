@@ -108,11 +108,14 @@ h1, h2, h3 {
 /* Common Section Styles */
 .section {
     background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.10);
+    border: 1px solid rgba(123, 111, 214, 0.35);
     border-radius: 18px;
     padding: 2.5rem;
     margin-bottom: 2rem;
-    box-shadow: 0 14px 34px rgba(0,0,0,0.35);
+    box-shadow: 
+        0 0 0 1px rgba(123, 111, 214, 0.4) inset,
+        0 0 32px rgba(123, 111, 214, 0.35),
+        0 14px 34px rgba(0,0,0,0.35);
     backdrop-filter: blur(12px);
 }
 
@@ -181,11 +184,14 @@ h1, h2, h3 {
 /* Project Header (for project detail pages) */
 .project-header {
     background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.12);
+    border: 1px solid rgba(123, 111, 214, 0.35);
     border-radius: 18px;
     padding: 3rem;
     margin-bottom: 2rem;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+    box-shadow: 
+        0 0 0 1px rgba(123, 111, 214, 0.4) inset,
+        0 0 32px rgba(123, 111, 214, 0.35),
+        0 16px 40px rgba(0,0,0,0.35);
     backdrop-filter: blur(14px);
 }
 
@@ -317,16 +323,22 @@ h1, h2, h3 {
   border-radius: 18px;
   overflow: hidden;
   background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.30);
+  border: 1px solid rgba(123, 111, 214, 0.35);
+  box-shadow: 
+    0 0 0 1px rgba(123, 111, 214, 0.4) inset,
+    0 0 32px rgba(123, 111, 214, 0.35),
+    0 10px 24px rgba(0,0,0,0.30);
   backdrop-filter: blur(10px);
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
 .skill-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 34px rgba(0,0,0,0.35);
-  border-color: rgba(120, 200, 210, 0.25);
+  box-shadow: 
+    0 0 0 1px rgba(120, 200, 210, 0.5) inset,
+    0 0 48px rgba(120, 200, 210, 0.45),
+    0 14px 34px rgba(0,0,0,0.35);
+  border-color: rgba(120, 200, 210, 0.5);
 }
 
 .skill-image {
@@ -414,15 +426,15 @@ h1, h2, h3 {
   text-decoration: none;
   border-radius: 18px;
   background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.10);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
-  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+  border: 1px solid rgba(123, 111, 214, 0.35);
+  box-shadow: 
+    0 0 0 1px rgba(123, 111, 214, 0.4) inset,
+    0 0 32px rgba(123, 111, 214, 0.35),
+    0 16px 40px rgba(0,0,0,0.35);
 }
 
 .project-card:hover {
-  transform: translateY(-2px);
-  background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.16);
+  /* No hover effect - projects are not clickable */
 }
 
 .project-card-body {
