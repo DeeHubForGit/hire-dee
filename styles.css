@@ -100,9 +100,21 @@ h1, h2, h3 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 14px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 0.9rem;
   opacity: 0.9;
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-link:hover {
+  opacity: 0.7;
 }
 
 /* Common Section Styles */
@@ -450,8 +462,8 @@ h1, h2, h3 {
 }
 
 /* Ensure skill cards stay readable even inside .section */
-.skill-card h3 {
-  color: #fff;
+.skill-card h2 {
+  color: #cbb7ff; /* soft purple */
 }
 
 .skill-card p {

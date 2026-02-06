@@ -25,23 +25,83 @@
         
         .skill-card.is-static h3 {
             font-size: 1.8rem;
-            color: #ffffff;
+            color: #cbb7ff; /* soft purple tint */
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
             gap: 0.75rem;
             border-bottom: none;
         }
-        
+
+        .skill-card.is-static h3 {
+            background: linear-gradient(90deg, #c77dff, #5eead4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
         .skill-card.is-static h3 .emoji {
             font-size: 2rem;
         }
         
         .skill-card.is-static p {
             font-size: 1.05rem;
-            color: rgba(255,255,255,0.85);
+            color: rgba(203, 183, 255, 0.9); /* soft purple body text */
             line-height: 1.7;
             margin: 0;
+        }
+
+        .business-analysis-icon {
+            width: 40px;
+            height: 40px;
+            flex: 0 0 auto;
+        }
+
+        .development-icon {
+            width: 48px;
+            height: 48px;
+            flex: 0 0 auto;
+        }
+
+        .testing-icon {
+            width: 52px;
+            height: 52px;
+            flex: 0 0 auto;
+        }
+
+        .deployment-icon {
+            width: 40px;
+            height: 40px;
+            flex: 0 0 auto;
+        }
+
+        .writing-icon {
+            width: 40px;
+            height: 40px;
+            flex: 0 0 auto;
+        }
+        
+        .communication-icon {
+            width: 40px;
+            height: 40px;
+            flex: 0 0 auto;
+        }
+
+        .collaboration-icon {
+            width: 40px;
+            height: 40px;
+            flex: 0 0 auto;
+        }
+
+        .ai-icon {
+            width: 40px;
+            height: 40px;
+            flex: 0 0 auto;
+        }
+
+        .process-icon {
+            width: 40px;
+            height: 40px;
+            flex: 0 0 auto;
         }
     </style>
 </head>
@@ -58,52 +118,109 @@
     <div class="container">
         <a href="index.html" class="back-link"><span class="back-arrow">◀</span> Back to Home</a>
         <div class="skill-card is-static" id="requirements">
-            <h3><span class="emoji">🧠</span> Business Analysis & Requirements</h3>
+            <h3>
+                <img
+                    src="images/market-analysis_11858229.png"
+                    alt="Business Analysis icon"
+                    class="business-analysis-icon"
+                > Business Analysis & Requirements
+            </h3>
             <p>Strong at defining clear, actionable requirements for complex systems. Comfortable working with integrations, APIs and edge cases and translating business needs into specifications that developers can actually build from. Known for producing requirements that reduce rework and speed up delivery.</p>
         </div>
 
         <div class="skill-card is-static" id="development">
-            <h3><span class="emoji">💻</span> Development</h3>
+            <h3>
+                <img
+                    src="images/icons8-development-64.png"
+                    alt="Development icon"
+                    class="development-icon"
+                >
+                Development
+            </h3>
             <p>Hands-on development experience across VB6, C#, Web and backend systems. Builds production-ready features with a strong focus on correct requirements implementation and maintainability. Uses AI to accelerate development without compromising design quality.</p>
         </div>
 
         <div class="skill-card is-static" id="testing">
-            <h3><span class="emoji">🧪</span> Testing & Quality Mindset</h3>
+            <h3> 
+                <img
+                    src="images/multiple-choice_13366685.png"
+                    alt="Testing icon"
+                    class="testing-icon"
+                >
+                Testing & Quality Mindset
+            </h3>
             <p>Thorough and methodical tester with a strong focus on real-world behaviour and edge cases. Works closely with internal testers to ensure solutions meet business intent and behave correctly in production.</p>
         </div>
 
         <div class="skill-card is-static" id="deployment">
-            <h3><span class="emoji">⬆️</span> Deployment</h3>
+            <h3>
+                <img
+                    src="images/upload_9780059.png"
+                    alt="Deployment icon"
+                    class="deployment-icon"
+                >
+                Deployment
+            </h3>
             <p>Deploying and configuring systems so environments, data and integrations are set up correctly from day one.</p>
         </div>
         
         <div class="skill-card is-static" id="writing">
-            <h3><span class="emoji">✍️</span> Writing & Documentation</h3>
+            <h3> 
+                <img
+                    src="images/file-folder_6813921.png"
+                    alt="Writing icon"
+                    class="writing-icon"
+                >
+                Writing & Documentation
+            </h3>
             <p>Clear, concise writer who produces easy-to-understand documentation, release notes and help text. Able to adapt to different formats quickly when given a good example. Writing is used as a tool to reduce confusion, support adoption and improve outcomes.</p>
         </div>
         
         <div class="skill-card is-static" id="communication">
-            <h3><span class="emoji">🗣</span> Communication</h3>
+            <h3>
+                <img
+                    src="images/chat_4686663.png"
+                    alt="Communication icon"
+                    class="communication-icon"
+                >
+                Communication
+            </h3>
             <p>Clear, practical communicator who explains technical concepts in plain language. Comfortable answering questions using examples, visuals and step-by-step explanations to ensure shared understanding across technical and non-technical audiences.</p>
         </div>
         
-        <div class="skill-card is-static" id="attention-to-detail">
-            <h3><span class="emoji">🔎</span> Attention to Detail</h3>
-            <p>Naturally detail-oriented, with mistakes, inconsistencies and gaps standing out quickly. This supports high-quality requirements, testing, documentation and review work, and helps catch issues early before they become costly.</p>
-        </div>
-        
         <div class="skill-card is-static" id="collaboration">
-            <h3><span class="emoji">🤝</span> Collaboration</h3>
+            <h3>
+                <img
+                    src="images/partners_12313680.png"
+                    alt="Collaboration icon"
+                    class="collaboration-icon"
+                >
+                Collaboration
+            </h3>
             <p>Works well with developers, testers, stakeholders and clients. Known as approachable, reliable and easy to work with, while still maintaining high standards and clear expectations.</p>
         </div>
         
         <div class="skill-card is-static" id="ai-enabled-work">
-            <h3><span class="emoji">🤖</span> AI-Enabled Work</h3>
+            <h3>
+                <img
+                    src="images/basket_8538004.png"
+                    alt="AI icon"
+                    class="ai-icon"
+                >
+                AI-Enabled Work
+            </h3>
             <p>Uses AI to speed up writing, review test plans and provide fast access to answers, improving efficiency and throughput across analysis, development and testing.</p>
         </div>
         
         <div class="skill-card is-static" id="process-improvement">
-            <h3><span class="emoji">⚙️</span> Process Improvement & Automation</h3>
+            <h3>
+                <img
+                    src="images/improvement_10254717.png"
+                    alt="Process Improvement icon"
+                    class="process-icon"
+                >
+                Process Improvement & Automation
+            </h3>
             <p>Identifies inefficient or manual processes and improves them through better system design, automation and practical tooling.</p>
         </div>
     </div>
