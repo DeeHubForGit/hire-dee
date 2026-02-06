@@ -208,7 +208,7 @@ h1, h2, h3 {
   pointer-events: none; /* stays non-interactive */
 }
 
-/* Primary Button (shared by Contact and Back buttons) */
+/* Primary Button (shared by Contact and Home buttons) */
 .primary-btn {
   display: inline-block;
   padding: 16px 48px;
@@ -234,8 +234,8 @@ h1, h2, h3 {
   transform: translateY(0);
 }
 
-/* Back button - slightly smaller than default */
-.back-btn {
+/* Home button - slightly smaller than default */
+.home-btn {
   padding: 14px 36px;
   font-size: 1rem;
 }
