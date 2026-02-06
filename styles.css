@@ -208,18 +208,36 @@ h1, h2, h3 {
   pointer-events: none; /* stays non-interactive */
 }
 
-/* Back Link */
-.back-link {
-    display: inline-block;
-    color: #667eea;
-    text-decoration: none;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    transition: color 0.3s;
+/* Primary Button (shared by Contact and Back buttons) */
+.primary-btn {
+  display: inline-block;
+  padding: 16px 48px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #8b5cf6 0%, #22d3ee 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+  margin-bottom: 2rem;
 }
 
-.back-link:hover {
-    color: #764ba2;
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
+}
+
+.primary-btn:active {
+  transform: translateY(0);
+}
+
+/* Back button - slightly smaller than default */
+.back-btn {
+  padding: 14px 36px;
+  font-size: 1rem;
 }
 
 /* Project Header (for project detail pages) */
@@ -859,27 +877,10 @@ h1, h2, h3 {
   text-align: center;
 }
 
+/* Contact button - uses primary-btn styles */
 .contact-btn {
-  display: inline-block;
-  padding: 16px 48px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #ffffff;
-  background: linear-gradient(135deg, #8b5cf6 0%, #22d3ee 100%);
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
-}
-
-.contact-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.5);
-}
-
-.contact-btn:active {
-  transform: translateY(0);
+  /* Inherits from .primary-btn via shared class in HTML */
+  margin-bottom: 0;
 }
 
 .hd-mobile-inline {
