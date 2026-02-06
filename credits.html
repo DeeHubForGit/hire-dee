@@ -9,7 +9,7 @@
 
   <!-- Credits page specific styling only -->
   <style>
-    .credits-page .wrap { max-width: 1100px; margin: 0 auto; padding: 56px 24px; }
+    .credits-page .wrap { max-width: 900px; margin: 0 auto; padding: 56px 24px; }
     .credits-page h1 { font-size: 56px; line-height: 1.05; margin: 0 0 10px; }
     .credits-page .subtitle { opacity: 0.85; margin: 0 0 28px; }
     .credits-page .back-link { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; margin: 0 0 28px; }
@@ -27,8 +27,15 @@
     .credits-page a:hover { opacity: 0.9; }
     .credits-page .thumbnail-col { width: 120px; padding-right: 16px; }
     .credits-page .icon-col { width: 60px; padding-right: 16px; }
+    .credits-page .use-col { width: 240px; }
     .credits-page .image-thumb { width: 120px; height: 80px; object-fit: cover; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); }
     .credits-page .icon-thumb { width: 40px; height: 40px; object-fit: contain; }
+    
+    @media (max-width: 768px) {
+      .credits-page .wrap { padding: 40px 12px; }
+      .credits-page h1 { font-size: 40px; }
+      .credits-page .credits-card { padding: 16px; }
+    }
   </style>
 </head>
 
@@ -50,19 +57,15 @@
       <table class="credits-table" role="table" aria-label="Image credits">
         <thead>
           <tr>
-            <th class="thumbnail-col">Preview</th>
-            <th>Image Use</th>
-            <th>Description</th>
-            <th>Author</th>
-            <th>Source</th>
+            <th class="thumbnail-col">Image</th>
+            <th class="use-col">Used In</th>
+            <th>Attribution</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td class="thumbnail-col"><img src="images/hero-65.jpg" alt="Hero background" class="image-thumb"></td>
-            <td>Hero background</td>
-            <td>Futuristic technology concept gradient background</td>
-            <td>freepik</td>
+            <td class="use-col">Hero background</td>
             <td>
               <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com/free-vector/futuristic-technology-concept-gradient-background_5903464.htm#fromView=search&page=1&position=0&uuid=db179351-4a50-4d27-bc7e-61b96f018268&query=hero+background+purple+aqua+futuristic+technology">
                 Image by freepik
@@ -71,9 +74,7 @@
           </tr>
           <tr>
             <td class="thumbnail-col"><img src="images/requirements.jpg" alt="Requirements" class="image-thumb"></td>
-            <td>Requirements Gathering</td>
-            <td>Tech brand working on sustainability goals</td>
-            <td>pikisuperstar</td>
+            <td class="use-col">Requirements Gathering</td>
             <td>
               <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com/free-photo/tech-brand-working-sustainability-goals_129719312.htm#fromView=search&page=1&position=0&uuid=e1f36ee8-d7eb-41f1-bfa4-d3cdac0069c3&query=requirements+gathering+smiling">
                 Image by pikisuperstar on Freepik
@@ -82,9 +83,7 @@
           </tr>
           <tr>
             <td class="thumbnail-col"><img src="images/development.jpg" alt="Development" class="image-thumb"></td>
-            <td>Development</td>
-            <td>Focused software developer writing code on laptop looking at multiple screens</td>
-            <td>DC Studio</td>
+            <td class="use-col">Development</td>
             <td>
               <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com/free-photo/focused-software-developer-writing-code-laptop-looking-multiple-screens-with-programming-language-is-interrupted-by-colleague-coder-asking-advice-programmers-doing-online-cloud-computing_22298477.htm#fromView=search&page=1&position=45&uuid=daa9c986-7dcd-4cf5-b7d3-f834da3f7f34&query=development">
                 Image by DC Studio on Freepik
@@ -93,9 +92,7 @@
           </tr>
           <tr>
             <td class="thumbnail-col"><img src="images/testing.png" alt="Testing" class="image-thumb"></td>
-            <td>Testing</td>
-            <td>Standard quality control concept</td>
-            <td>freepik</td>
+            <td class="use-col">Testing</td>
             <td>
               <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com/free-photo/standard-quality-control-concept-m_36027725.htm#fromView=search&page=2&position=3&uuid=a064e53f-f5b8-4819-8723-19f85a43b31c&query=testing">
                 Image by freepik
@@ -104,9 +101,7 @@
           </tr>
           <tr>
             <td class="thumbnail-col"><img src="images/deployment.png" alt="Deployment" class="image-thumb"></td>
-            <td>Deployment</td>
-            <td>Woman holding an upload icon and a laptop</td>
-            <td>rawpixel.com</td>
+            <td class="use-col">Deployment</td>
             <td>Freepik</td>
           </tr>
         </tbody>
@@ -120,16 +115,14 @@
         <thead>
           <tr>
             <th class="icon-col">Icon</th>
-            <th>Area</th>
-            <th>Asset</th>
-            <th>Credit</th>
+            <th class="use-col">Used In</th>
+            <th>Attribution</th>
           </tr>
         </thead>
         <tbody>
             <tr>
                 <td class="icon-col"><img src="images/document.png" alt="Document icon" class="icon-thumb"></td>
-                <td>Bug Bounty Scope Builder</td>
-                <td>document.png</td>
+                <td class="use-col">Bug Bounty Scope Builder</td>
                 <td>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.flaticon.com/free-icons/regulatory" title="regulatory icons">
                     Regulatory icons created by Us and Up - Flaticon
@@ -138,8 +131,7 @@
             </tr>
             <tr>
                 <td class="icon-col"><img src="images/icons8-rest-api-64.png" alt="REST API icon" class="icon-thumb"></td>
-                <td>Bug Bounty Scope Builder API</td>
-                <td><code>icons8-rest-api-64.png</code></td>
+                <td class="use-col">Bug Bounty Scope Builder API</td>
                 <td>
                 <a target="_blank" rel="noopener noreferrer" href="https://icons8.com/icon/55497/rest-api">Rest API</a>
                 icon by
@@ -148,8 +140,7 @@
             </tr>
           <tr>
             <td class="icon-col"><img src="images/market-analysis_11858229.png" alt="Business Analysis icon" class="icon-thumb"></td>
-            <td>Skills: Business Analysis</td>
-            <td><code>market-analysis_11858229.png</code></td>
+            <td class="use-col">Skills: Business Analysis</td>
             <td>
               <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com/icon/market-analysis_11858229#fromView=keyword&page=1&position=55&uuid=ee9fbae2-4db3-4d23-9703-2725948cc24d">
                 Icon by Canticons
@@ -159,8 +150,7 @@
 
           <tr>
             <td class="icon-col"><img src="images/icons8-development-64.png" alt="Development icon" class="icon-thumb"></td>
-            <td>Skills: Development</td>
-            <td>icons8-development-64.png</td>
+            <td class="use-col">Skills: Development</td>
             <td>
               <a target="_blank" rel="noopener noreferrer" href="https://icons8.com/icon/WMvhDPZBJ9X2/backend-development">Development</a>
               icon by
@@ -170,8 +160,7 @@
 
           <tr>
             <td class="icon-col"><img src="images/multiple-choice_13366685.png" alt="Testing icon" class="icon-thumb"></td>
-            <td>Skills: Testing</td>
-            <td><code>multiple-choice_13366685.png</code></td>
+            <td class="use-col">Skills: Testing</td>
             <td>
               <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com/icon/multiple-choice_13366685#fromView=keyword&page=2&position=29&uuid=b5dc392e-d4c3-4f48-a739-c0bce976e2b5">
                 Icon by Maan Icons
@@ -181,8 +170,7 @@
 
           <tr>
             <td class="icon-col"><img src="images/upload_9780059.png" alt="Deployment icon" class="icon-thumb"></td>
-            <td>Skills: Deployment</td>
-            <td><code>upload_9780059.png</code></td>
+            <td class="use-col">Skills: Deployment</td>
             <td>
               <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com/icon/upload_9780059#fromView=search&page=1&position=85&uuid=752bd8ad-e3f2-4bd6-832c-7279b99b0f2e">
                 Icon by kliwir art
@@ -192,8 +180,7 @@
 
           <tr>
             <td class="icon-col"><img src="images/file-folder_6813921.png" alt="Writing icon" class="icon-thumb"></td>
-            <td>Skills: Writing</td>
-            <td><code>file-folder_6813921.png</code></td>
+            <td class="use-col">Skills: Writing</td>
             <td>
               <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com/icon/file-folder_6813921#fromView=search&page=2&position=13&uuid=bd7b2681-8511-48d4-a2bd-b26e9e61ab0e">
                 Icon by SyafriStudio
@@ -203,8 +190,7 @@
 
           <tr>
             <td class="icon-col"><img src="images/chat_4686663.png" alt="Communication icon" class="icon-thumb"></td>
-            <td>Skills: Communication</td>
-            <td><code>chat_4686663.png</code></td>
+            <td class="use-col">Skills: Communication</td>
             <td>
               <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com/icon/chat_4686663#fromView=search&page=4&position=43&uuid=a215935a-05aa-474f-b7b6-0f29c8b2f9fd">
                 Icon by adrianadam
@@ -214,8 +200,7 @@
 
           <tr>
             <td class="icon-col"><img src="images/partners_12313680.png" alt="Collaboration icon" class="icon-thumb"></td>
-            <td>Skills: Collaboration</td>
-            <td><code>partners_12313680.png</code></td>
+            <td class="use-col">Skills: Collaboration</td>
             <td>
               <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com/icon/partners_12313680#fromView=search&page=2&position=20&uuid=577a12f9-a949-4a4e-acaf-ec8c4b62eba8">
                 Icon by nangicon
@@ -225,8 +210,7 @@
 
           <tr>
             <td class="icon-col"><img src="images/basket_8538004.png" alt="AI icon" class="icon-thumb"></td>
-            <td>Skills: AI Enabled</td>
-            <td><code>basket_8538004.png</code></td>
+            <td class="use-col">Skills: AI Enabled</td>
             <td>
               <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com/icon/basket_8538004#fromView=search&page=2&position=47&uuid=3230b358-215f-465f-8207-82472ec7f106">
                 Icon by vanda arief
@@ -236,8 +220,7 @@
 
           <tr>
             <td class="icon-col"><img src="images/improvement_10254717.png" alt="Process Improvement icon" class="icon-thumb"></td>
-            <td>Skills: Process Improvement</td>
-            <td><code>improvement_10254717.png</code></td>
+            <td class="use-col">Skills: Process Improvement</td>
             <td>
               <a target="_blank" rel="noopener noreferrer" href="https://www.freepik.com/icon/improvement_10254717#fromView=search&page=2&position=12&uuid=618d635c-926d-4b6f-93cc-26379a5ee3b0">
                 Icon by Karyative
