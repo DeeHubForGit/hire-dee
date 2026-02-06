@@ -565,6 +565,19 @@ h1, h2, h3 {
   flex-shrink: 0;
 }
 
+.scope-project-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 0;
+}
+
+.scope-project-icon {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 auto;
+}
+
 .api-project-title {
   display: flex;
   align-items: center;
