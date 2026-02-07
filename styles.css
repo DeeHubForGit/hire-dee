@@ -243,6 +243,55 @@ h1, h2, h3 {
   transform: translateY(0);
 }
 
+/* Secondary Button (outline, matches card gradient border) */
+.secondary-btn {
+  display: inline-block;
+  padding: 14px 36px;               /* same as .home-btn */
+  font-size: 1rem;                  /* same as .home-btn */
+  font-weight: 700;
+
+  color: var(--accent-teal);        /* aqua text */
+  background: rgba(255,255,255,0.02);
+  border: none;
+  border-radius: 12px;
+
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow:
+    0 0 0 1px rgba(123, 111, 214, 0.35) inset,
+    0 10px 24px rgba(0,0,0,0.30);
+  position: relative;
+}
+
+.secondary-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(135deg, #8b5cf6, #22d3ee);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.secondary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 48px rgba(120, 200, 210, 0.35),
+    0 14px 34px rgba(0,0,0,0.35);
+}
+
+.secondary-btn:active {
+  transform: translateY(0);
+}
+
+.secondary-btn .btn-arrow {
+  background: var(--accent-teal);
+}
+
 /* Home button - slightly smaller than default */
 .home-btn {
   padding: 14px 36px;
@@ -699,6 +748,15 @@ h1, h2, h3 {
     font-size: 1.4rem;
   }
 
+  .screenshot {
+    max-width: 100%;
+  }
+
+  .screenshot img {
+    max-height: 420px;
+    object-fit: contain;
+  }
+
   .tech-stack {
     flex-wrap: wrap;
   }
@@ -725,13 +783,14 @@ h1, h2, h3 {
 }
 
 .screenshot {
-  margin: 0;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .screenshot img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
@@ -965,4 +1024,9 @@ h1, h2, h3 {
 
   -webkit-mask: url("images/right-arrow-split-black.png") no-repeat center / contain;
   mask: url("images/right-arrow-split-black.png") no-repeat center / contain;
+}
+
+.scope-project-icon,
+.api-project-icon {
+    filter: brightness(0) invert(1);
 }
