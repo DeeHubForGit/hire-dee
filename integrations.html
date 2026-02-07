@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration Efficiency - Hire Dee</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Integration-specific styles */
+        .integration-card {
+            background: rgba(255, 255, 255, 0.045);
+            border: 1px solid rgba(123, 111, 214, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 
+                0 0 0 1px rgba(123, 111, 214, 0.4) inset,
+                0 0 32px rgba(123, 111, 214, 0.35),
+                0 10px 24px rgba(0,0,0,0.30);
+        }
+        
+        /* Heading row */
+        .integration-card h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 0.75rem;
+            color: #ffffff;
+            display: flex;
+            align-items: center; /* consistent alignment */
+            gap: 1rem;
+        }
+
+        /* Fixed logo box (controls alignment, not the image) */
+        .integration-logo {
+            width: 84px;
+            height: 60px;           /* was smaller (likely 44px) */
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex: 0 0 auto;
+        }
+
+        /* Image scales inside the box */
+        .integration-icon {
+            max-width: 88px;
+            max-height: 72px;     /* match container height */
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Square icons: contain, do not crop */
+        .integration-icon.is-square {
+            max-width: 44px;
+            max-height: 44px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Spacer for headings without a logo */
+        .integration-logo.is-empty {
+            background: none;
+        }
+
+        /* Only if needed */
+        .integration-icon.is-wide {
+            max-height: 68px;
+        }
+
+        .integration-card p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+        
+        .integration-card p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .integration-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        
+        .integration-card ul li {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .integration-card ul li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #ffffff;
+        }
+
+        .overview-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(167, 139, 250, 0.4);
+            margin-bottom: 2.5rem;
+        }
+        
+        .overview-card h2 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .integration-card h3 {
+                font-size: 1.5rem;
+            }
+            
+            .integration-icon {
+                width: 64px;
+                height: 64px;
+            }
+            
+            .overview-card h2 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    
+    <header class="page-banner">
+        <div class="wrap">
+            <h1 class="page-banner-title">Integration Efficiency</h1>
+            <p class="page-banner-subtitle">Connecting disparate systems for seamless data flow and efficiency</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="wrap">
+            <a href="index.html" class="primary-btn home-btn"><span class="btn-arrow" aria-hidden="true"></span> Home</a>
+            
+            <!-- Overview Section -->
+            <div class="integration-card overview-card">
+                <h2>Integration Efficiency Overview</h2>
+                
+                <p>A wide range of hands-on integration work: connecting disparate systems for seamless data flow and efficiency. This includes expertise in webhook-based and API-driven data exchanges to streamline operations and reduce manual effort. The focus is on delivering robust, reliable solutions that bridge silos and enhance collaboration across platforms.</p>
+                
+                <ul>
+                    <li><strong>Real-time Data Exchange:</strong> Architecting and implementing webhook integrations and custom API solutions for near-instant synchronization of data between platforms.</li>
+                    
+                    <li><strong>Workflow Automation:</strong> Designing integration workflows that reduce manual intervention, increase speed, and improve data accuracy.</li>
+                    
+                </ul>
+                
+                <p>These integrations demonstrate a comprehensive understanding of data transformation, authentication, error handling, and continuous monitoring—all critical for ensuring that integrated solutions remain reliable, performant, and maintainable over time.</p>
+            </div>
+            
+            <!-- Individual Integration Cards -->
+            <div class="integration-card">
+                <h3>
+                    <span class="integration-logo">
+                        <img src="images/sybiz-logo.png" alt="Sybiz" class="integration-icon">
+                    </span>
+                    Export to Sybiz
+                </h3>
+                <p>Designed and coded a solution to export proprietary invoice data, documenting required fields and file format. Reduced manual entry and improved accuracy.</p>
+            </div>
+            
+            <div class="integration-card">
+                <h3>
+                    Export to ProStix
+                </h3>
+                <p>Programmed an XML exporter after analysing the format, mapping invoice and credit fields and handling number validation. Enabled a manufacturer and its parent company to share the same accounting system.</p>
+            </div>
+            
+            <div class="integration-card">
+                <h3>
+                    <img src="images/mitek.jpg" alt="MiTek" class="integration-icon">
+                    MiTek Importer
+                </h3>
+                <p>Built a custom importer and documented the full process including field mapping and table definitions. This integration reduced the workload so one staff resource was no longer required.</p>
+            </div>
+            
+            <div class="integration-card">
+                <h3>
+                    Outlook & Skedulo Integration
+                </h3>
+                <p>Researched APIs, tested functions, documented the webhook setup and event handling needed to sync appointment data. Saved time manually adding appointments to calendars.</p>
+            </div>
+            
+            <div class="integration-card">
+                <h3>
+                    <img src="images/hubspot.jpg" alt="HubSpot" class="integration-icon">
+                    Export to HubSpot
+                </h3>
+                <p>Collaborated on data format, mapped fields, tested file imports and verified uploads. Reduced the time spent manually exporting client data.</p>
+            </div>
+            
+            <div class="integration-card">
+                <h3>
+                    <img src="images/proptrack.png" alt="PropTrack" class="integration-icon is-wide">
+                    Export to PropTrack
+                </h3>
+                <p>Reviewed API, mapped data and summarised current integration functionality based on code review. Enabled a property services company to access more valuation jobs through a major bank, increasing potential revenue.</p>
+            </div>
+
+            <div class="integration-card">
+                <h3>Google Calendar & Scheduling</h3>
+                <p>
+                    Integrated scheduling workflows with Google Calendar, handling event creation,
+                    updates and cancellations to keep bookings in sync. Reduced manual calendar
+                    management and ensured reliable visibility of appointments.
+                </p>
+            </div>
+
+            <div class="integration-card">
+                <h3>Resend Email Integration</h3>
+                <p>Implemented transactional email delivery using Resend for system notifications and confirmations. Documented configuration and ensured reliable delivery with clear error handling.</p>
+            </div>
+
+            <div class="integration-card">
+                <h3>ClickSend SMS Integration</h3>
+                <p>Integrated SMS notifications using ClickSend to send booking confirmations and reminders. Tested delivery scenarios and documented usage to support ongoing maintenance.</p>
+            </div>
+
+            <div class="integration-card">
+                <h3>Google Maps Integration</h3>
+                <p>Integrated Google Maps to support address lookup and location accuracy. Improved data consistency and reduced errors caused by manual address entry.</p>
+            </div>
+
+        </div>
+    </div>
+    
+    <div id="footer"></div>
+    <script src="includes.js"></script>
+</body>
+</html>

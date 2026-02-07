@@ -898,6 +898,14 @@ h1, h2, h3 {
   background-image: url("images/action-process-directions-performance-verification-icon.jpg");
 }
 
+.skill-image-int {
+  background-image: url("images/standard-quality-control-collage-concept.jpg");
+}
+
+.skill-image-writing {
+  background-image: url("images/teenage-girl-does-her-homework-while-sitting-with-books-laptop.jpg");
+}
+
 .section-title::before,
 .section-title::after,
 .skills-summary::before,
