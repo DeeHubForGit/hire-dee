@@ -462,6 +462,7 @@ h1, h2, h3 {
 .skill-image {
   height: 240px;
   border-radius: 18px 18px 0 0;
+  background-color: transparent;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -888,14 +889,17 @@ h1, h2, h3 {
 
 .skill-image-inst {
   background-image: url("images/lastest-version-fresh-updates-application-updates-concept.jpg");
+  background-position: center top;
 }
 
 .skill-image-support {
   background-image: url("images/contact-us-help-business-consulting-support.jpg");
+  background-position: center top;
 }
 
 .skill-image-process {
   background-image: url("images/action-process-directions-performance-verification-icon.jpg");
+  background-position: center top;
 }
 
 .skill-image-int {
