@@ -35,6 +35,15 @@ h1, h2, h3 {
   letter-spacing: -0.01em;
 }
 
+/* White heading with subtle purple outline */
+.heading-outline {
+    color: #ffffff;
+    -webkit-text-stroke: 0.8px #8b5cf6;  /* thinner but stronger purple */
+    text-shadow: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 /* =====================================================
    Shared layout wrapper
    - Use this for header + hero text alignment
