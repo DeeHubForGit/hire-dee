@@ -24,8 +24,9 @@
         }
         
         .skill-card.is-static h3 {
-            font-size: 1.8rem;
-            color: #cbb7ff; /* soft purple tint */
+            font-size: 2.25rem; 
+            font-weight: 800;  /* keeps the outline clean */
+            line-height: 1.15;
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
@@ -33,19 +34,17 @@
             border-bottom: none;
         }
 
-        .skill-card.is-static h3 {
-            background: linear-gradient(90deg, #c77dff, #5eead4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .skill-card.is-static h3 .emoji {
-            font-size: 2rem;
+        /* White heading with subtle purple outline */
+        .heading-outline {
+            color: #ffffff;
+            -webkit-text-stroke: 0.8px #8b5cf6;  /* thinner but stronger purple */
+            text-shadow: none;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         
         .skill-card.is-static p {
             font-size: 1.05rem;
-            color: rgba(203, 183, 255, 0.9); /* soft purple body text */
             line-height: 1.7;
             margin: 0;
         }
@@ -117,6 +116,32 @@
             height: 40px;
             flex: 0 0 auto;
         }
+
+        /* Mobile: prevent heading overflow */
+        @media (max-width: 600px) {
+            .skill-card.is-static {
+                padding: 1.4rem;          /* slightly tighter */
+            }
+
+            .skill-card.is-static h3 {
+                font-size: 1.75rem;       /* key: smaller on mobile */
+                line-height: 1.15;
+                gap: 0.6rem;
+                flex-wrap: nowrap;        /* keep icon + text as one row */
+                align-items: flex-start;  /* stops vertical weirdness */
+            }
+
+            .skill-card.is-static h3 img {
+                width: 34px;              /* reduce the icon footprint */
+                height: 34px;
+            }
+
+            .skill-heading-text {
+                display: block;
+                min-width: 0;             /* important for flex overflow */
+                overflow-wrap: anywhere;  /* allow wrapping instead of overflow */
+            }
+        }
     </style>
 </head>
 <body>
@@ -130,112 +155,115 @@
     </header>
     
     <div class="container">
-        <a href="index.html" class="primary-btn home-btn">◀ Home</a>
-        <div class="skill-card is-static" id="requirements">
-            <h3>
-                <img
-                    src="images/market-analysis_11858229.png"
-                    alt="Business Analysis icon"
-                    class="business-analysis-icon"
-                > Business Analysis & Requirements
-            </h3>
-            <p>Strong at defining clear, actionable requirements for complex systems. Comfortable working with integrations, APIs and edge cases and translating business needs into specifications that developers can actually build from. Known for producing requirements that reduce rework and speed up delivery.</p>
-        </div>
+        <div class="wrap">
+            <a href="index.html" class="primary-btn home-btn">◀ Home</a>
+            <div class="skill-card is-static" id="requirements">
+                <h3 class="heading-outline">
+                    <img
+                        src="images/market-analysis_11858229.png"
+                        alt="Business Analysis icon"
+                        class="business-analysis-icon"
+                    >
+                    <span class="skill-heading-text">Business Analysis & Requirements</span>
+                </h3>
+                <p>Strong at defining clear, actionable requirements for complex systems. Comfortable working with integrations, APIs and edge cases and translating business needs into specifications that developers can actually build from. Known for producing requirements that reduce rework and speed up delivery.</p>
+            </div>
 
-        <div class="skill-card is-static" id="development">
-            <h3>
-                <img
-                    src="images/icons8-development-64.png"
-                    alt="Development icon"
-                    class="development-icon"
-                >
-                Development
-            </h3>
-            <p>Hands-on development experience across VB6, C#, Web and backend systems. Builds production-ready features with a strong focus on correct requirements implementation and maintainability. Uses AI to accelerate development without compromising design quality.</p>
-        </div>
+            <div class="skill-card is-static" id="development">
+                <h3 class="heading-outline">
+                    <img
+                        src="images/icons8-development-64.png"
+                        alt="Development icon"
+                        class="development-icon"
+                    >
+                    <span class="skill-heading-text">Development</span>
+                </h3>
+                <p>Hands-on development experience across VB6, C#, Web and backend systems. Builds production-ready features with a strong focus on correct requirements implementation and maintainability. Uses AI to accelerate development without compromising design quality.</p>
+            </div>
 
-        <div class="skill-card is-static" id="testing">
-            <h3> 
-                <img
-                    src="images/multiple-choice_13366685.png"
-                    alt="Testing icon"
-                    class="testing-icon"
-                >
-                Testing & Quality Mindset
-            </h3>
-            <p>Thorough and methodical tester with a strong focus on real-world behaviour and edge cases. Works closely with internal testers to ensure solutions meet business intent and behave correctly in production.</p>
-        </div>
+            <div class="skill-card is-static" id="testing">
+                <h3 class="heading-outline"> 
+                    <img
+                        src="images/multiple-choice_13366685.png"
+                        alt="Testing icon"
+                        class="testing-icon"
+                    >
+                    <span class="skill-heading-text">Testing & Quality Mindset</span>
+                </h3>
+                <p>Thorough and methodical tester with a strong focus on real-world behaviour and edge cases. Works closely with internal testers to ensure solutions meet business intent and behave correctly in production.</p>
+            </div>
 
-        <div class="skill-card is-static" id="deployment">
-            <h3>
-                <img
-                    src="images/upload_9780059.png"
-                    alt="Deployment icon"
-                    class="deployment-icon"
-                >
-                Deployment
-            </h3>
-            <p>Deploying and configuring systems so environments, data and integrations are set up correctly from day one.</p>
-        </div>
-        
-        <div class="skill-card is-static" id="writing">
-            <h3> 
-                <img
-                    src="images/file-folder_6813921.png"
-                    alt="Writing icon"
-                    class="writing-icon"
-                >
-                Writing & Documentation
-            </h3>
-            <p>Clear, concise writer who produces easy-to-understand documentation, release notes and help text. Able to adapt to different formats quickly when given a good example. Writing is used as a tool to reduce confusion, support adoption and improve outcomes.</p>
-        </div>
-        
-        <div class="skill-card is-static" id="communication">
-            <h3>
-                <img
-                    src="images/chat_4686663.png"
-                    alt="Communication icon"
-                    class="communication-icon"
-                >
-                Communication
-            </h3>
-            <p>Clear, practical communicator who explains technical concepts in plain language. Comfortable answering questions using examples, visuals and step-by-step explanations to ensure shared understanding across technical and non-technical audiences.</p>
-        </div>
-        
-        <div class="skill-card is-static" id="collaboration">
-            <h3>
-                <img
-                    src="images/partners_12313680.png"
-                    alt="Collaboration icon"
-                    class="collaboration-icon"
-                >
-                Collaboration
-            </h3>
-            <p>Works well with developers, testers, stakeholders and clients. Known as approachable, reliable and easy to work with, while still maintaining high standards and clear expectations.</p>
-        </div>
-        
-        <div class="skill-card is-static" id="ai-enabled-work">
-            <h3>
-                <img
-                    src="images/basket_8538004.png"
-                    alt="AI icon"
-                    class="ai-icon"
-                >
-                AI-Enabled Work
-            </h3>
-            <p>Uses AI to speed up writing, review test plans and provide fast access to answers, improving efficiency and throughput across analysis, development and testing.</p>
-        </div>
-        
-        <div class="skill-card is-static" id="process-improvement">
-            <h3>
-                <img
-                    src="images/improvement_10254717.png"
-                    alt="Process Improvement icon"
-                    class="process-icon"
-                >
-                Process Improvement & Automation
-            </h3>
-            <p>Identifies inefficient or manual processes and improves them through better system design, automation and practical tooling.</p>
+            <div class="skill-card is-static" id="deployment">
+                <h3 class="heading-outline">
+                    <img
+                        src="images/upload_9780059.png"
+                        alt="Deployment icon"
+                        class="deployment-icon"
+                    >
+                    <span class="skill-heading-text">Deployment</span>
+                </h3>
+                <p>Deploying and configuring systems so environments, data and integrations are set up correctly from day one.</p>
+            </div>
+            
+            <div class="skill-card is-static" id="writing">
+                <h3 class="heading-outline"> 
+                    <img
+                        src="images/file-folder_6813921.png"
+                        alt="Writing icon"
+                        class="writing-icon"
+                    >
+                    <span class="skill-heading-text">Writing & Documentation</span>
+                </h3>
+                <p>Clear, concise writer who produces easy-to-understand documentation, release notes and help text. Able to adapt to different formats quickly when given a good example. Writing is used as a tool to reduce confusion, support adoption and improve outcomes.</p>
+            </div>
+            
+            <div class="skill-card is-static" id="communication">
+                <h3 class="heading-outline">
+                    <img
+                        src="images/chat_4686663.png"
+                        alt="Communication icon"
+                        class="communication-icon"
+                    >
+                    <span class="skill-heading-text">Communication</span>
+                </h3>
+                <p>Clear, practical communicator who explains technical concepts in plain language. Comfortable answering questions using examples, visuals and step-by-step explanations to ensure shared understanding across technical and non-technical audiences.</p>
+            </div>
+            
+            <div class="skill-card is-static" id="collaboration">
+                <h3 class="heading-outline">
+                    <img
+                        src="images/partners_12313680.png"
+                        alt="Collaboration icon"
+                        class="collaboration-icon"
+                    >
+                    <span class="skill-heading-text">Collaboration</span>
+                </h3>
+                <p>Works well with developers, testers, stakeholders and clients. Known as approachable, reliable and easy to work with, while still maintaining high standards and clear expectations.</p>
+            </div>
+            
+            <div class="skill-card is-static" id="ai-enabled-work">
+                <h3 class="heading-outline">
+                    <img
+                        src="images/basket_8538004.png"
+                        alt="AI icon"
+                        class="ai-icon"
+                    >
+                    <span class="skill-heading-text">AI-Enabled Work</span>
+                </h3>
+                <p>Uses AI to speed up writing, review test plans and provide fast access to answers, improving efficiency and throughput across analysis, development and testing.</p>
+            </div>
+            
+            <div class="skill-card is-static" id="process-improvement">
+                <h3 class="heading-outline">
+                    <img
+                        src="images/improvement_10254717.png"
+                        alt="Process Improvement icon"
+                        class="process-icon"
+                    >
+                    <span class="skill-heading-text">Process Improvement & Automation</span>
+                </h3>
+                <p>Identifies inefficient or manual processes and improves them through better system design, automation and practical tooling.</p>
+            </div>
         </div>
     </div>
     
