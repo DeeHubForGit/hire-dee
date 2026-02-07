@@ -575,7 +575,10 @@ h1, h2, h3 {
 
 
 .project-link {
-  display: inline-block;
+  display: inline-flex;          /* was inline-block */
+  align-items: center;
+  gap: 10px;
+
   margin-top: 14px;
   font-weight: 800;
   color: var(--accent-teal);
@@ -904,3 +907,27 @@ h1, h2, h3 {
   }
 }
 
+/* Keep text + arrow together */
+.skill-link{
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Kill any existing ▶ pseudo arrow */
+.skill-link::after{
+  content: none !important;
+}
+
+/* Colour the PNG arrow via mask */
+.skill-link-arrow{
+  width: 28px;
+  height: 18px;
+  display: inline-block;
+  flex: 0 0 auto;
+
+  background: #4fd1c5; /* aqua */
+
+  -webkit-mask: url("images/right-arrow-split-black.png") no-repeat center / contain;
+  mask: url("images/right-arrow-split-black.png") no-repeat center / contain;
+}
