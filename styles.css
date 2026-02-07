@@ -249,6 +249,21 @@ h1, h2, h3 {
   font-size: 1rem;
 }
 
+/* Arrow icon in buttons - using mask for clean rendering */
+.btn-arrow {
+  width: 20px;
+  height: 14px;
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+  flex: 0 0 auto;
+  
+  background: #ffffff; /* white arrow */
+  
+  -webkit-mask: url("images/left-arrow-split-black.png") no-repeat center / contain;
+  mask: url("images/left-arrow-split-black.png") no-repeat center / contain;
+}
+
 /* Project Header (for project detail pages) */
 .project-header {
     background: rgba(255,255,255,0.06);
@@ -873,6 +888,14 @@ h1, h2, h3 {
 
 .skill-image-inst {
   background-image: url("images/deployment.png");
+}
+
+.skill-image-support {
+  background-image: url("images/contact-us-help-business-consulting-support.jpg");
+}
+
+.skill-image-process {
+  background-image: url("images/action-process-directions-performance-verification-icon.jpg");
 }
 
 .section-title::before,
