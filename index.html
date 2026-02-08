@@ -94,6 +94,104 @@
             margin-right: 0.5em;
         }
         
+        .role-summary {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 48px;
+        }
+
+        .role-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+
+          /* This controls spacing between icon/title/years */
+          gap: 6px;
+        }
+
+        /* Fixed icon slot so all titles start at the same height */
+        .role-icon {
+          width: 56px;
+          height: 56px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .role-icon img {
+          width: 100%;
+          height: auto;
+          display: block;
+
+          /* make black icons white */
+          filter: brightness(0) invert(1);
+        }
+
+        /* Keep titles aligned even if they wrap */
+        .role-title {
+          font-weight: 700;
+          font-size: 1rem;
+          line-height: 1.2;
+
+          /* remove margin so gap controls spacing */
+          margin: 0;
+
+          /* keep alignment across items */
+          min-height: 2.4em;
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+        }
+
+        .role-years {
+          /* remove margin so gap controls spacing */
+          margin: 0;
+
+          font-size: 1.05rem;
+          font-weight: 700;
+          opacity: 0.95;
+        }
+
+        .role-item.total {
+          min-width: 160px;
+        }
+
+        @media (max-width: 720px) {
+          .role-summary {
+            flex-wrap: wrap;
+            gap: 18px 22px;           /* row-gap, column-gap */
+            justify-content: center;
+          }
+
+          .role-item {
+            flex: 0 1 30%;            /* 3 across on row 1 */
+          }
+
+          /* 4th item (Business Analyst) and the Overall block go to row 2 */
+          .role-summary .role-item:nth-child(4),
+          .role-summary .role-item.total {
+            flex: 0 1 46%;            /* 2 across on row 2 */
+          }
+
+          .role-title {
+            min-height: 0;            /* avoid forced vertical spacing on small screens */
+          }
+
+          /* 1) Increase padding BEFORE Project Manager and BA (push row 2 down a bit) */
+          .role-summary .role-item.role-pm,
+          .role-summary .role-item.role-ba {
+            margin-top: 10px;
+          }
+
+          /* 2) Decrease padding AFTER Project Manager and BA (pull Overall closer) */
+          .role-summary .role-item.total {
+            margin-top: -50px;          /* remove the negative pull */
+          }
+        }
+
+
     </style>
 </head>
 <body>
@@ -155,6 +253,47 @@
             </div>
         </div>
     </div>
+
+    <section class="role-summary">
+      <div class="role-item">
+        <div class="role-icon">
+          <img src="images/programmer_3678954.png" alt="Developer">
+        </div>
+        <div class="role-title">Developer</div>
+        <div class="role-years">~12 years</div>
+      </div>
+
+      <div class="role-item">
+        <div class="role-icon">
+          <img src="images/internship_10491724.png" alt="Tester">
+        </div>
+        <div class="role-title">Tester</div>
+        <div class="role-years">~3 years</div>
+      </div>
+
+      <div class="role-item role-pm">
+        <div class="role-icon">
+          <img src="images/manager_7425384.png" alt="Project Manager">
+        </div>
+        <div class="role-title">Project Manager</div>
+        <div class="role-years">~4 years</div>
+      </div>
+
+      <div class="role-item role-ba">
+        <div class="role-icon">
+          <img src="images/graph_2179267.png" alt="Business Analyst">
+        </div>
+        <div class="role-title">Business Analyst</div>
+        <div class="role-years">~8 years</div>
+      </div>
+
+      <div class="role-item total">
+        <div class="role-icon" aria-hidden="true"></div>
+        <div class="role-title">Overall Experience</div>
+        <div class="role-years">27+ years</div>
+      </div>
+
+    </section>
 
     <section class="skills-summary">
       <div class="wrap">

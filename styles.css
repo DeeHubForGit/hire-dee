@@ -983,10 +983,14 @@ h1, h2, h3 {
   text-align: center;
 }
 
-/* Contact button - uses primary-btn styles */
+/* Contact button - larger than other primary buttons */
 .contact-btn {
-  /* Inherits from .primary-btn via shared class in HTML */
   margin-bottom: 0;
+
+  /* size boost (Contact only) */
+  padding: 14px 28px;
+  font-size: 1.25rem;
+  border-radius: 14px;
 }
 
 .hd-mobile-inline {
