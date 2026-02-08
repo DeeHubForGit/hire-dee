@@ -113,6 +113,29 @@
             filter: brightness(0) invert(1);
         }
 
+        .skill-experience {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: rgba(235, 228, 255, 0.85);
+        }
+
+        .skill-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .pill {
+            background: rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.4);
+            color: rgba(235, 228, 255, 0.95);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
         /* Mobile: prevent heading overflow */
         @media (max-width: 600px) {
             .skill-card.is-static {
@@ -162,7 +185,18 @@
                     >
                     <span class="skill-heading-text">Business Analysis & Requirements</span>
                 </h3>
-                <p>Defining clear, buildable requirements for complex business systems, with a strong focus on integrations, edge cases and real-world behaviour. Delivered requirements, user stories and system documentation across property valuations, manufacturing, community care and retail systems, including Halo, Skedulo and MAJIC. Practised continuously since ~2001, with a formal Business Analyst role from 2016–2024.</p>
+                <p>Defining clear, buildable requirements for complex business systems, with a strong focus on integrations, edge cases and real-world behaviour. Delivered requirements, user stories and system documentation across property valuations, manufacturing, community care and retail systems.</p>
+                <p class="skill-experience">
+                    <strong>Experience:</strong> ~23 years — Embedded in role (formal BA role 2016–2024)
+                </p>
+                <div class="skill-pills">
+                    <span class="pill">Requirements Gathering</span>
+                    <span class="pill">Stakeholder Analysis</span>
+                    <span class="pill">Functional Specifications</span>
+                    <span class="pill">User Stories</span>
+                    <span class="pill">Acceptance Criteria</span>
+                    <span class="pill">Edge Case Analysis</span>
+                </div>
             </div>
 
             <div class="skill-card is-static" id="development">
@@ -174,7 +208,18 @@
                     >
                     <span class="skill-heading-text">Development</span>
                 </h3>
-                <p>Hands-on development across VB6, C# and web systems, focused on correctness, maintainability and automation rather than novelty. Built and enhanced production systems including MAJIC, RFID library tools, data import/export utilities and integration tooling (ProStix, MiTek, Sybiz). Active development experience since ~1997, with ongoing hands-on work alongside analysis roles.</p>
+                <p>Hands-on development across VB6, C# and web systems, focused on correctness, maintainability and automation rather than novelty. Built and enhanced production systems including data import/export utilities and integration tooling (ProStix, MiTek, Sybiz).</p>
+                <p class="skill-experience">
+                    <strong>Experience:</strong> ~27 years — Embedded in role
+                </p>
+                <div class="skill-pills">
+                    <span class="pill">C#</span>
+                    <span class="pill">VB6</span>
+                    <span class="pill">Web Development</span>
+                    <span class="pill">Automation</span>
+                    <span class="pill">Data Import/Export</span>
+                    <span class="pill">System Integration</span>
+                </div>
             </div>
 
             <div class="skill-card is-static" id="testing">
@@ -186,7 +231,18 @@
                     >
                     <span class="skill-heading-text">Testing & Quality Mindset</span>
                 </h3>
-                <p>Designing and executing practical test plans focused on real-world usage, edge cases and failure paths. Performed QA and UAT across Windows, web and mobile-adjacent systems, including CarelinkPlus, MAJIC, Halo and RFID applications, often catching issues before release. Dedicated QA work since ~2008, with testing embedded in roles since ~2001.</p>
+                <p>Designing and executing practical test plans focused on real-world usage, edge cases and failure paths. Performed QA and UAT across Windows, web and mobile-adjacent systems, often catching issues before release.</p>
+                <p class="skill-experience">
+                    <strong>Experience:</strong> ~17 years — Embedded in role
+                </p>
+                <div class="skill-pills">
+                    <span class="pill">Test Planning</span>
+                    <span class="pill">QA</span>
+                    <span class="pill">UAT</span>
+                    <span class="pill">Regression Testing</span>
+                    <span class="pill">Smoke Testing</span>
+                    <span class="pill">Edge Case Testing</span>
+                </div>
             </div>
 
             <div class="skill-card is-static" id="deployment">
@@ -198,7 +254,17 @@
                     >
                     <span class="skill-heading-text">Deployment</span>
                 </h3>
-                <p>Supporting releases by validating data, environments and integrations so systems behave correctly in production. Involved in deploying and supporting live systems across manufacturing, community care and scheduling platforms, including troubleshooting post-release issues. Hands-on deployment exposure since ~2001, alongside development and support work.</p>
+                <p>Supporting releases by validating data, environments and integrations so systems behave correctly in production. Involved in deploying and supporting live systems across manufacturing, community care and scheduling platforms, including troubleshooting post-release issues.</p>
+                <p class="skill-experience">
+                    <strong>Experience:</strong> ~23 years — Embedded in role
+                </p>
+                <div class="skill-pills">
+                    <span class="pill">Release Validation</span>
+                    <span class="pill">Environment Checks</span>
+                    <span class="pill">Data Validation</span>
+                    <span class="pill">Integration Verification</span>
+                    <span class="pill">Post-release Support</span>
+                </div>
             </div>
             
             <div class="skill-card is-static" id="it-support">
@@ -210,7 +276,17 @@
                     >
                     <span class="skill-heading-text">IT Support</span>
                 </h3>
-                <p>Providing calm, methodical technical support for complex business systems used in real operational environments. Delivered Tier 3 and escalated support for MAJIC, Halo and Skedulo, resolving data, integration and system behaviour issues. Support experience spans ~1997 to 2024, across retail, manufacturing and enterprise systems.</p>
+                <p>Providing calm, methodical technical support for complex business systems used in real operational environments. Delivered Tier 3 and escalated support, resolving data, integration and system behaviour issues across retail, manufacturing and enterprise systems.</p>
+                <p class="skill-experience">
+                    <strong>Experience:</strong> ~27 years — Embedded in role
+                </p>
+                <div class="skill-pills">
+                    <span class="pill">Tier 3 Support</span>
+                    <span class="pill">Incident Investigation</span>
+                    <span class="pill">Data Issues</span>
+                    <span class="pill">Integration Issues</span>
+                    <span class="pill">Root Cause Identification</span>
+                </div>
             </div>
 
             <div class="skill-card is-static" id="process-improvement">
@@ -222,7 +298,17 @@
                     >
                     <span class="skill-heading-text">Process Improvement & Automation</span>
                 </h3>
-                <p>Identifying inefficient manual processes and replacing them with automated or system-driven solutions. Delivered measurable improvements including automated invoice exports, bulk job updates, scheduling efficiencies and data imports that removed significant manual effort. Process improvement work ongoing since ~2001, often embedded within analysis and development roles.</p>
+                <p>Identifying inefficient manual processes and replacing them with automated or system-driven solutions. Delivered measurable improvements including automated invoice exports, bulk job updates, scheduling efficiencies and data imports that removed significant manual effort.</p>
+                <p class="skill-experience">
+                    <strong>Experience:</strong> ~23 years — Embedded in role
+                </p>
+                <div class="skill-pills">
+                    <span class="pill">Process Mapping</span>
+                    <span class="pill">Manual Effort Reduction</span>
+                    <span class="pill">Automation Design</span>
+                    <span class="pill">Workflow Optimisation</span>
+                    <span class="pill">Efficiency Gains</span>
+                </div>
             </div>
 
             <div class="skill-card is-static" id="integration">
@@ -255,7 +341,17 @@
                     >
                     <span class="skill-heading-text">Writing & Documentation</span>
                 </h3>
-                <p>Writing clear, practical documentation that enables development, support and user adoption. Produced user stories, system overviews, training material, release notes and troubleshooting guides, including documentation used by offshore and US-based teams. Professional technical writing since ~2001, with extensive documentation work from 2009–2024.</p>
+                <p>Writing clear, practical documentation that enables development, support and user adoption. Produced user stories, system overviews, training material, release notes and troubleshooting guides, including documentation used by offshore and US-based teams.</p>
+                <p class="skill-experience">
+                    <strong>Experience:</strong> ~23 years — Embedded in role
+                </p>
+                <div class="skill-pills">
+                    <span class="pill">User Stories</span>
+                    <span class="pill">System Documentation</span>
+                    <span class="pill">Training Materials</span>
+                    <span class="pill">Release Notes</span>
+                    <span class="pill">Troubleshooting Guides</span>
+                </div>
             </div>
             
             <div class="skill-card is-static" id="communication">
@@ -267,7 +363,16 @@
                     >
                     <span class="skill-heading-text">Communication</span>
                 </h3>
-                <p>Explaining technical concepts clearly to non-technical stakeholders using concrete examples and structured explanations. Worked closely with developers, testers, vendors and business users across multiple industries to align expectations and reduce misunderstandings. Stakeholder communication experience since ~1997, across client-facing and internal roles.</p>
+                <p>Explaining technical concepts clearly to non-technical stakeholders using concrete examples and structured explanations. Worked closely with developers, testers, vendors and business users across multiple industries to align expectations and reduce misunderstandings.</p>
+                <p class="skill-experience">
+                    <strong>Experience:</strong> ~27 years — Embedded in role
+                </p>
+                <div class="skill-pills">
+                    <span class="pill">Stakeholder Communication</span>
+                    <span class="pill">Technical Explanation</span>
+                    <span class="pill">Clarifying Requirements</span>
+                    <span class="pill">Expectation Alignment</span>
+                </div>
             </div>
             
             <div class="skill-card is-static" id="collaboration">
@@ -279,7 +384,17 @@
                     >
                     <span class="skill-heading-text">Collaboration</span>
                 </h3>
-                <p>Working effectively with developers, testers, vendors and business stakeholders to deliver stable, well-understood solutions. Regularly acted as the bridge between business needs and technical implementation in small teams and distributed environments. Collaborative delivery experience since ~1997.</p>
+                <p>Working effectively with developers, testers, vendors and business stakeholders to deliver stable, well-understood solutions. Regularly acted as the bridge between business needs and technical implementation in small teams and distributed environments.</p>
+                <p class="skill-experience">
+                    <strong>Experience:</strong> ~27 years — Embedded in role
+                </p>
+                <div class="skill-pills">
+                    <span class="pill">Client Collaboration</span>
+                    <span class="pill">Stakeholder Collaboration</span>
+                    <span class="pill">Cross-functional Teams</span>
+                    <span class="pill">Developer Collaboration</span>
+                    <span class="pill">Business–Technology Bridge</span>
+                </div>
             </div>
             
             <div class="skill-card is-static" id="ai-enabled-work">
@@ -291,7 +406,17 @@
                     >
                     <span class="skill-heading-text">AI-Enabled Work</span>
                 </h3>
-                <p>Using AI as a productivity tool to accelerate analysis, writing, testing and development without compromising quality. Applied AI to drafting requirements, reviewing test scenarios, generating code scaffolding and validating logic in recent projects. Actively using AI-assisted workflows since ~2023.</p>
+                <p>Using AI as a productivity tool to accelerate analysis, writing, testing and development without compromising quality. Applied AI to drafting requirements, reviewing test scenarios, generating code scaffolding and validating logic in recent projects.</p>
+                <p class="skill-experience">
+                    <strong>Experience:</strong> ~2+ years — Embedded in role
+                </p>
+                <div class="skill-pills">
+                    <span class="pill">AI-assisted Analysis</span>
+                    <span class="pill">AI-assisted Writing</span>
+                    <span class="pill">AI-assisted Testing</span>
+                    <span class="pill">Code Scaffolding</span>
+                    <span class="pill">Logic Validation</span>
+                </div>
             </div>
             
         </div>
