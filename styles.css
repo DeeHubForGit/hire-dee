@@ -220,7 +220,7 @@ h1, h2, h3 {
 /* Primary Button (shared by Contact and Home buttons) */
 .primary-btn {
   display: inline-block;
-  padding: 16px 48px;
+  padding: 10px 18px;
   font-size: 1.1rem;
   font-weight: 700;
   color: #ffffff;
@@ -246,7 +246,7 @@ h1, h2, h3 {
 /* Secondary Button (outline, matches card gradient border) */
 .secondary-btn {
   display: inline-block;
-  padding: 14px 36px;               /* same as .home-btn */
+  padding: 10px 18px;               /* same as .home-btn */
   font-size: 1rem;                  /* same as .home-btn */
   font-weight: 700;
 
@@ -294,7 +294,7 @@ h1, h2, h3 {
 
 /* Home button - slightly smaller than default */
 .home-btn {
-  padding: 14px 36px;
+  padding: 10px 18px;
   font-size: 1rem;
 }
 
@@ -303,7 +303,7 @@ h1, h2, h3 {
   width: 20px;
   height: 14px;
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 6px;
   vertical-align: middle;
   flex: 0 0 auto;
   
