@@ -39,15 +39,22 @@
             line-height: 1.15;
             margin-bottom: 1rem;
             color: #ffffff;
+        }
+
+        .title-row {
             display: flex;
-            align-items: center; /* consistent alignment */
-            gap: 0.75rem;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .title-text {
+            line-height: 1.2;
         }
 
         /* Fixed logo box (controls alignment, not the image) */
         .integration-logo {
             width: 84px;
-            height: 60px;           /* was smaller (likely 44px) */
+            height: 60px;
             display: flex;
             align-items: center;
             justify-content: flex-start;
@@ -82,6 +89,40 @@
         /* Only if needed */
         .integration-icon.is-wide {
             max-height: 68px;
+        }
+
+        /* Integration logo container: normalises different logo sizes */
+        .logo-badge {
+            width: 124px;
+            height: 52px;
+            background: #ffffff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+        }
+
+        .logo-badge img {
+            max-width: 114px;
+            max-height: 40px;
+            width: auto;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        /* Only for wide logos */
+        .logo-badge.is-wide {
+            width: 122px;
+        }
+
+        .logo-badge.is-wide img {
+            max-width: 114px;
+        }
+
+        .logo-clicksend {
+            max-height: 80px;   /* was effectively ~40 */
         }
 
         .integration-card p {
@@ -157,10 +198,13 @@
                 font-size: 1.75rem;
                 gap: 0.6rem;
             }
-            
-            .integration-icon {
-                width: 64px;
-                height: 64px;
+
+            .integration-title {
+                flex-wrap: wrap;
+            }
+
+            .integration-title-text {
+                flex-basis: 100%;
             }
             
             .overview-card h2 {
@@ -185,7 +229,7 @@
             
             <!-- Overview Section -->
             <div class="integration-card overview-card">
-                <h2>Integration Efficiency Overview</h2>
+                <h2>Overview</h2>
                 
                 <p>A wide range of hands-on integration work: connecting disparate systems for seamless data flow and efficiency. This includes expertise in webhook-based and API-driven data exchanges to streamline operations and reduce manual effort. The focus is on delivering robust, reliable solutions that bridge silos and enhance collaboration across platforms.</p>
                 
@@ -196,83 +240,131 @@
                     
                 </ul>
                 
-                <p>These integrations demonstrate a comprehensive understanding of data transformation, authentication, error handling, and continuous monitoring—all critical for ensuring that integrated solutions remain reliable, performant, and maintainable over time.</p>
+                <p>These integrations demonstrate a strong, practical understanding of data transformation, authentication, error handling and monitoring, ensuring solutions remain reliable, performant and maintainable over time.</p>
             </div>
             
             <!-- Individual Integration Cards -->
+            
             <div class="integration-card">
-                <h3>
-                    <span class="integration-logo">
-                        <img src="images/sybiz-logo.png" alt="Sybiz" class="integration-icon">
+                <h3 class="integration-title">
+                    <span class="title-row">
+                        <span class="logo-badge">
+                            <img src="images/outlook-logo-long.png" alt="Outlook" class="integration-icon">
+                        </span>
+                        <span class="title-text">Outlook & Skedulo Integration</span>
                     </span>
-                    Export to Sybiz
-                </h3>
-                <p>Designed and coded a solution to export proprietary invoice data, documenting required fields and file format. Reduced manual entry and improved accuracy.</p>
-            </div>
-            
-            <div class="integration-card">
-                <h3>
-                    Export to ProStix
-                </h3>
-                <p>Programmed an XML exporter after analysing the format, mapping invoice and credit fields and handling number validation. Enabled a manufacturer and its parent company to share the same accounting system.</p>
-            </div>
-            
-            <div class="integration-card">
-                <h3>
-                    <img src="images/mitek.jpg" alt="MiTek" class="integration-icon">
-                    MiTek Importer
-                </h3>
-                <p>Built a custom importer and documented the full process including field mapping and table definitions. This integration reduced the workload so one staff resource was no longer required.</p>
-            </div>
-            
-            <div class="integration-card">
-                <h3>
-                    <img src="images/outlook-logo-long.png" alt="HubSpot" class="integration-icon">
-                    Outlook & Skedulo Integration
                 </h3>
                 <p>Researched APIs, tested functions, documented the webhook setup and event handling needed to sync appointment data. Saved time manually adding appointments to calendars.</p>
             </div>
             
-            <div class="integration-card">
-                <h3>
-                    <img src="images/hubspot-white.png" alt="HubSpot" class="integration-icon">
-                    Export to HubSpot
-                </h3>
-                <p>Collaborated on data format, mapped fields, tested file imports and verified uploads. Reduced the time spent manually exporting client data.</p>
-            </div>
-            
-            <div class="integration-card">
-                <h3>
-                    <img src="images/proptrack.png" alt="PropTrack" class="integration-icon is-wide">
-                    Export to PropTrack
-                </h3>
-                <p>Reviewed API, mapped data and summarised current integration functionality based on code review. Enabled a property services company to access more valuation jobs through a major bank, increasing potential revenue.</p>
-            </div>
+
 
             <div class="integration-card">
-                <h3>Google Calendar & Scheduling</h3>
+                <h3 class="integration-title">
+                    <span class="title-row">
+                        <span class="logo-badge">
+                            <img src="images/google-calendar.png" alt="Google Calendar" class="integration-icon">
+                        </span>
+                        <span class="title-text">Google Calendar & Scheduling</span>
+                    </span>
+                </h3>
                 <p>
                     Integrated scheduling workflows with Google Calendar, handling event creation,
                     updates and cancellations to keep bookings in sync. Reduced manual calendar
                     management and ensured reliable visibility of appointments.
                 </p>
             </div>
+            
+            <div class="integration-card">
+                <h3 class="integration-title">
+                    <span class="title-row">
+                        <span class="logo-badge">
+                            <img src="images/google-maps.png" alt="Google Map" class="integration-icon">
+                        </span>
+                        <span class="title-text">Google Maps Integration</span>
+                    </span>
+                </h3>
+                <p>Integrated Google Maps to support address lookup and location accuracy. Improved data consistency and reduced errors caused by manual address entry.</p>
+            </div>
 
             <div class="integration-card">
-                <h3>Resend Email Integration</h3>
+                <h3 class="integration-title">
+                    <span class="title-row">
+                        <span class="logo-badge">
+                            <img src="images/resend.png" alt="Resend" class="integration-icon">
+                        </span>
+                        <span class="title-text">Resend Email Integration</span>
+                    </span>
+                </h3>
                 <p>Implemented transactional email delivery using Resend for system notifications and confirmations. Documented configuration and ensured reliable delivery with clear error handling.</p>
             </div>
 
             <div class="integration-card">
-                <h3>ClickSend SMS Integration</h3>
+                <h3 class="integration-title">
+                    <span class="title-row">
+                        <span class="logo-badge">
+                            <img src="images/clicksend.png" alt="ClickSend" class="logo-clicksend">
+                        </span>
+                        <span class="title-text">ClickSend SMS Integration</span>
+                    </span>
+                </h3>
                 <p>Integrated SMS notifications using ClickSend to send booking confirmations and reminders. Tested delivery scenarios and documented usage to support ongoing maintenance.</p>
             </div>
 
             <div class="integration-card">
-                <h3>Google Maps Integration</h3>
-                <p>Integrated Google Maps to support address lookup and location accuracy. Improved data consistency and reduced errors caused by manual address entry.</p>
+                <h3 class="integration-title">
+                    <span class="title-row">
+                        <span class="logo-badge">
+                            <img src="images/hubspot-white.png" alt="HubSpot" class="integration-icon">
+                        </span>
+                        <span class="title-text">Export to HubSpot</span>
+                    </span>
+                </h3>
+                <p>Collaborated on data format, mapped fields, tested file imports and verified uploads. Reduced the time spent manually exporting client data.</p>
+            </div>
+            
+            <div class="integration-card">
+                <h3 class="integration-title">
+                    <span class="title-row">
+                        <span class="logo-badge">
+                            <img src="images/proptrack.png" alt="PropTrack" class="integration-icon">
+                        </span>
+                        <span class="title-text">Export to PropTrack</span>
+                    </span>
+                </h3>
+                <p>Reviewed API, mapped data and summarised current integration functionality based on code review. Enabled a property services company to access more valuation jobs through a major bank, increasing potential revenue.</p>
             </div>
 
+            <div class="integration-card">
+                <h3 class="integration-title">
+                    <span class="title-row">
+                        <span class="logo-badge">
+                            <img src="images/mitek.jpg" alt="MiTek" class="integration-icon">
+                        </span>
+                        <span class="title-text">MiTek Importer</span>
+                    </span>
+                </h3>
+                <p>Built a custom importer and documented the full process including field mapping and table definitions. This integration reduced the workload so one staff resource was no longer required.</p>
+            </div>
+
+            <div class="integration-card">
+                <h3>
+                    Export to ProStix
+                </h3>
+                <p>Programmed an XML exporter after analysing the format, mapping invoice and credit fields and handling number validation. Enabled a manufacturer and its parent company to share the same accounting system.</p>
+            </div>
+
+            <div class="integration-card">
+                <h3 class="integration-title">
+                    <span class="title-row">
+                        <span class="logo-badge">
+                            <img src="images/sybiz-logo.png" alt="Sybiz" class="integration-icon">
+                        </span>
+                        <span class="title-text">Export to Sybiz</span>
+                    </span>
+                </h3>
+                <p>Designed and coded a solution to export proprietary invoice data, documenting required fields and file format. Reduced manual entry and improved accuracy.</p>
+            </div>
         </div>
     </div>
     
