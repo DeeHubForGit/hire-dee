@@ -37,28 +37,15 @@
             font-size: 2.25rem;
             font-weight: 800;
             line-height: 1.15;
-            margin-bottom: 1rem;
+            margin: 0;
             color: #ffffff;
         }
 
-        .title-row {
+        .integration-header {
             display: flex;
             align-items: center;
-            gap: 14px;
-        }
-
-        .title-text {
-            line-height: 1.2;
-        }
-
-        /* Fixed logo box (controls alignment, not the image) */
-        .integration-logo {
-            width: 84px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            flex: 0 0 auto;
+            gap: 16px;
+            margin-bottom: 1rem;
         }
 
         /* Image scales inside the box */
@@ -79,11 +66,6 @@
             width: auto;
             height: auto;
             object-fit: contain;
-        }
-
-        /* Spacer for headings without a logo */
-        .integration-logo.is-empty {
-            background: none;
         }
 
         /* Only if needed */
@@ -189,6 +171,7 @@
             margin-bottom: 1.5rem;
         }
 
+        /* MOBILE: stack integration logo above title text */
         @media (max-width: 600px) {
             .integration-card {
                 padding: 1.4rem;
@@ -196,15 +179,12 @@
 
             .integration-card h3 {
                 font-size: 1.75rem;
-                gap: 0.6rem;
             }
 
-            .integration-title {
-                flex-wrap: wrap;
-            }
-
-            .integration-title-text {
-                flex-basis: 100%;
+            .integration-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
             }
             
             .overview-card h2 {
@@ -234,7 +214,7 @@
                 <p>A wide range of hands-on integration work: connecting disparate systems for seamless data flow and efficiency. This includes expertise in webhook-based and API-driven data exchanges to streamline operations and reduce manual effort. The focus is on delivering robust, reliable solutions that bridge silos and enhance collaboration across platforms.</p>
                 
                 <ul>
-                    <li><strong>Real-time Data Exchange:</strong> Architecting and implementing webhook integrations and custom API solutions for near-instant synchronization of data between platforms.</li>
+                    <li><strong>Real-time Data Exchange:</strong> Architecting and implementing webhook integrations and custom API solutions for near-instant synchronisation of data between platforms.</li>
                     
                     <li><strong>Workflow Automation:</strong> Designing integration workflows that reduce manual intervention, increase speed, and improve data accuracy.</li>
                     
@@ -246,28 +226,24 @@
             <!-- Individual Integration Cards -->
             
             <div class="integration-card">
-                <h3 class="integration-title">
-                    <span class="title-row">
-                        <span class="logo-badge">
-                            <img src="images/outlook-logo-long.png" alt="Outlook" class="integration-icon">
-                        </span>
-                        <span class="title-text">Outlook & Skedulo Integration</span>
-                    </span>
-                </h3>
+                <div class="integration-header">
+                    <div class="logo-badge">
+                        <img src="images/outlook-logo-long.png" alt="Outlook logo" class="integration-icon">
+                    </div>
+                    <h3>Outlook & Skedulo Integration</h3>
+                </div>
                 <p>Researched APIs, tested functions, documented the webhook setup and event handling needed to sync appointment data. Saved time manually adding appointments to calendars.</p>
             </div>
             
 
 
             <div class="integration-card">
-                <h3 class="integration-title">
-                    <span class="title-row">
-                        <span class="logo-badge">
-                            <img src="images/google-calendar.png" alt="Google Calendar" class="integration-icon">
-                        </span>
-                        <span class="title-text">Google Calendar & Scheduling</span>
-                    </span>
-                </h3>
+                <div class="integration-header">
+                    <div class="logo-badge">
+                        <img src="images/google-calendar.png" alt="Google Calendar logo" class="integration-icon">
+                    </div>
+                    <h3>Google Calendar & Scheduling</h3>
+                </div>
                 <p>
                     Integrated scheduling workflows with Google Calendar, handling event creation,
                     updates and cancellations to keep bookings in sync. Reduced manual calendar
@@ -276,74 +252,62 @@
             </div>
             
             <div class="integration-card">
-                <h3 class="integration-title">
-                    <span class="title-row">
-                        <span class="logo-badge">
-                            <img src="images/google-maps.png" alt="Google Map" class="integration-icon">
-                        </span>
-                        <span class="title-text">Google Maps Integration</span>
-                    </span>
-                </h3>
+                <div class="integration-header">
+                    <div class="logo-badge">
+                        <img src="images/google-maps.png" alt="Google Maps logo" class="integration-icon">
+                    </div>
+                    <h3>Google Maps Integration</h3>
+                </div>
                 <p>Integrated Google Maps to support address lookup and location accuracy. Improved data consistency and reduced errors caused by manual address entry.</p>
             </div>
 
             <div class="integration-card">
-                <h3 class="integration-title">
-                    <span class="title-row">
-                        <span class="logo-badge">
-                            <img src="images/resend.png" alt="Resend" class="integration-icon">
-                        </span>
-                        <span class="title-text">Resend Email Integration</span>
-                    </span>
-                </h3>
+                <div class="integration-header">
+                    <div class="logo-badge">
+                        <img src="images/resend.png" alt="Resend logo" class="integration-icon">
+                    </div>
+                    <h3>Resend Email Integration</h3>
+                </div>
                 <p>Implemented transactional email delivery using Resend for system notifications and confirmations. Documented configuration and ensured reliable delivery with clear error handling.</p>
             </div>
 
             <div class="integration-card">
-                <h3 class="integration-title">
-                    <span class="title-row">
-                        <span class="logo-badge">
-                            <img src="images/clicksend.png" alt="ClickSend" class="logo-clicksend">
-                        </span>
-                        <span class="title-text">ClickSend SMS Integration</span>
-                    </span>
-                </h3>
+                <div class="integration-header">
+                    <div class="logo-badge">
+                        <img src="images/clicksend.png" alt="ClickSend logo" class="integration-icon logo-clicksend">
+                    </div>
+                    <h3>ClickSend SMS Integration</h3>
+                </div>
                 <p>Integrated SMS notifications using ClickSend to send booking confirmations and reminders. Tested delivery scenarios and documented usage to support ongoing maintenance.</p>
             </div>
 
             <div class="integration-card">
-                <h3 class="integration-title">
-                    <span class="title-row">
-                        <span class="logo-badge">
-                            <img src="images/hubspot-white.png" alt="HubSpot" class="integration-icon">
-                        </span>
-                        <span class="title-text">Export to HubSpot</span>
-                    </span>
-                </h3>
+                <div class="integration-header">
+                    <div class="logo-badge">
+                        <img src="images/hubspot-white.png" alt="HubSpot logo" class="integration-icon">
+                    </div>
+                    <h3>Export to HubSpot</h3>
+                </div>
                 <p>Collaborated on data format, mapped fields, tested file imports and verified uploads. Reduced the time spent manually exporting client data.</p>
             </div>
             
             <div class="integration-card">
-                <h3 class="integration-title">
-                    <span class="title-row">
-                        <span class="logo-badge">
-                            <img src="images/proptrack.png" alt="PropTrack" class="integration-icon">
-                        </span>
-                        <span class="title-text">Export to PropTrack</span>
-                    </span>
-                </h3>
+                <div class="integration-header">
+                    <div class="logo-badge">
+                        <img src="images/proptrack.png" alt="PropTrack logo" class="integration-icon">
+                    </div>
+                    <h3>Export to PropTrack</h3>
+                </div>
                 <p>Reviewed API, mapped data and summarised current integration functionality based on code review. Enabled a property services company to access more valuation jobs through a major bank, increasing potential revenue.</p>
             </div>
 
             <div class="integration-card">
-                <h3 class="integration-title">
-                    <span class="title-row">
-                        <span class="logo-badge">
-                            <img src="images/mitek.jpg" alt="MiTek" class="integration-icon">
-                        </span>
-                        <span class="title-text">MiTek Importer</span>
-                    </span>
-                </h3>
+                <div class="integration-header">
+                    <div class="logo-badge">
+                        <img src="images/mitek.jpg" alt="MiTek logo" class="integration-icon">
+                    </div>
+                    <h3>MiTek Importer</h3>
+                </div>
                 <p>Built a custom importer and documented the full process including field mapping and table definitions. This integration reduced the workload so one staff resource was no longer required.</p>
             </div>
 
@@ -355,14 +319,12 @@
             </div>
 
             <div class="integration-card">
-                <h3 class="integration-title">
-                    <span class="title-row">
-                        <span class="logo-badge">
-                            <img src="images/sybiz-logo.png" alt="Sybiz" class="integration-icon">
-                        </span>
-                        <span class="title-text">Export to Sybiz</span>
-                    </span>
-                </h3>
+                <div class="integration-header">
+                    <div class="logo-badge">
+                        <img src="images/sybiz-logo.png" alt="Sybiz logo" class="integration-icon">
+                    </div>
+                    <h3>Export to Sybiz</h3>
+                </div>
                 <p>Designed and coded a solution to export proprietary invoice data, documenting required fields and file format. Reduced manual entry and improved accuracy.</p>
             </div>
         </div>
