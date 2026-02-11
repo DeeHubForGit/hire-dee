@@ -123,6 +123,7 @@
             flex-wrap: wrap;
             gap: 0.5rem;
             margin-top: 1rem;
+            margin-bottom: 14px;
         }
 
         .pill {
@@ -163,6 +164,43 @@
                 min-width: 0;             /* important for flex overflow */
                 overflow-wrap: anywhere;  /* allow wrapping instead of overflow */
             }
+        }
+
+        /* Expandable skill card content */
+        .skill-more-content {
+            display: none;
+            margin-top: 20px;  /* clearer separation from pills */
+            color: rgba(235, 228, 255, 0.95);  /* match body text tone */
+        }
+
+        .skill-card.expanded .skill-more-content {
+            display: block;
+        }
+
+        .skill-more-toggle {
+            font-size: 0.95rem;     /* slightly larger than pill text */
+            line-height: 1.4;
+            margin-top: 12px;
+            background: none;
+            border: none;
+            padding: 0;
+            color: var(--accent-purple);
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .skill-more-toggle:hover {
+            text-decoration: underline;
+        }
+
+        .skill-more-content ul {
+            margin-top: 0.8rem;
+            padding-left: 1.2rem;   /* controlled indent */
+        }
+
+        .skill-more-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
         }
     </style>
 </head>
@@ -282,7 +320,7 @@
                     >
                     <span class="skill-heading-text">IT Support</span>
                 </h3>
-                <p class="skill-description">Providing calm, methodical technical support for complex business systems used in real operational environments. Delivered Tier 3 and escalated support, resolving data, integration and system behaviour issues across retail, manufacturing and enterprise systems.</p>
+                <p class="skill-description">Providing methodical technical support for business systems in real operational environments across retail, manufacturing and property valuations, with a focus on resolving reported issues.</p>
                 <p class="skill-experience">
                     <strong>Experience:</strong> ~1 year — Embedded in roles
                 </p>
@@ -292,6 +330,21 @@
                     <span class="pill">Data Issues</span>
                     <span class="pill">Integration Issues</span>
                     <span class="pill">Root Cause Identification</span>
+                </div>
+
+                <button class="skill-more-toggle" aria-expanded="false">
+                    Find out more >
+                </button>
+
+                <div class="skill-more-content">
+                    <ul>
+                        <li>Supported the Big W Layby system, resolving database deadlocks, corrupted files and other issues.</li>
+                        <li>Investigated issues within Timbertruss’s proprietary system, identifying causes and resolving as appropriate, supporting the system successfully for over a decade.</li>
+                        <li>Investigated complex Skedulo issues and liaised with the vendor to ensure successful resolution.</li>
+                        <li>Documented support processes for the Opteon US-based Jaro system and the local proprietary system Halo.</li>
+                        <li>Created technical documentation including the Jaro system overview, process diagrams, webhooks and a troubleshooting guide, enabling effective support by the US team and faster issue resolution.</li>
+                        <li>Provided Tier 3 support for the Halo system.</li>
+                    </ul>
                 </div>
             </div>
 
@@ -430,5 +483,16 @@
     
     <div id="footer"></div>
     <script src="includes.js"></script>
+    <script>
+        document.querySelectorAll('.skill-more-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const card = btn.closest('.skill-card');
+                const expanded = card.classList.toggle('expanded');
+
+                btn.textContent = expanded ? 'Show less <' : 'Find out more >';
+                btn.setAttribute('aria-expanded', expanded);
+            });
+        });
+    </script>
 </body>
 </html>
