@@ -396,7 +396,7 @@ h1, h2, h3 {
 
 .project-header .intro {
     font-size: 1.1rem;
-    color: rgba(255,255,255,0.75);
+    color: rgb(255, 255, 255);
     line-height: 1.8;
     max-width: none;
 }

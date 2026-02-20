@@ -6,6 +6,23 @@
     <title>Scope Builder - Hire Dee - Brilliant Solutions</title>
     <link rel="icon" type="image/svg+xml" href="light-bulb-outline.svg">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-snapshot {
+            list-style: disc;
+            padding-left: 1.2rem;   /* control indent */
+            margin: 1.5rem 0;       /* vertical breathing room */
+        }
+
+        .project-snapshot li {
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .project-snapshot li strong {
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
     <div id="header"></div>
@@ -26,6 +43,16 @@
             <p class="subtitle">Web application that retrieves mobile apps and APIs using a custom-built API,
             then constructs a bug bounty program scope from the URL, discovered assets and selected rewards.</p>
             <p class="intro">Reduces manual reconnaissance effort, produces more accurate scopes and demonstrates disciplined AI-assisted development with strong architectural control.</p>
+            <ul class="project-snapshot">
+                <li><strong>Modules:</strong> 5 separate modules instead of one large file, making the system easier to maintain and extend.</li>
+                <li><strong>Config-driven:</strong> Key content and rules stored in 3 JSON files so updates can be made without rewriting core code.</li>
+                <li><strong>Integrations:</strong> Connects to a custom API that retrieves data and includes an AI recommendation automatically in the generated scope.</li>
+                <li><strong>Reliability:</strong> Built-in error handling so the program continues working safely if an external service fails.</li>
+                <li><strong>State management:</strong> Saves user input automatically to prevent lost work.</li>
+                <li><strong>Editor:</strong> Allows bold, italic and structured formatting so the final scope reads like a professional document rather than plain text.</li>
+                <li><strong>Codebase:</strong> 15 organised source files, approximately 3.7k lines of code.</li>
+            </ul>
+
             <a href="project-scope-builder-api.html" class="project-link">
                 View Supporting API Project <span class="skill-link-arrow" aria-hidden="true"></span>
             </a>
