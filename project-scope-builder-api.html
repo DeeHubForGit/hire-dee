@@ -10,6 +10,22 @@
         .back-btn {
             margin-left: 16px;
         }
+
+        .project-snapshot {
+            list-style: disc;
+            padding-left: 1.2rem;   /* control indent */
+            margin: 1.5rem 0;       /* vertical breathing room */
+        }
+
+        .project-snapshot li {
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .project-snapshot li strong {
+            font-weight: 600;
+        }
     </style>
 </head>
 <body>
@@ -28,8 +44,14 @@
             >
                 Bug Bounty Scope Builder API
             </h2>
-            <p class="subtitle">Backend API for discovering mobile applications and API assets associated with a company domain.</p>
-            <p class="intro">Designed to support bug bounty and security programs by automating asset discovery and returning deterministic asset data for scope definition.</p>
+            <p class="subtitle">Backend API that provides verified asset intelligence to support accurate scope definition for bug bounties.</p>
+            <ul class="project-snapshot">
+                <li><strong>Mobile app discovery:</strong> Searches the Apple App Store and Google Play to retrieve official mobile apps for a company (e.g. “Coles”), including related apps (e.g. “Coles Mobile”). Allows search by <strong>app name</strong>, <strong>developer name</strong>, <strong>either</strong> (broad search) or <strong>both</strong> (narrow search) to control how wide the results are.</li>
+                <li><strong>API discovery:</strong> Searches the web for likely API names associated with a company domain, applies rule-based filtering to narrow results, then uses AI to select the most probable official API endpoint.</li>
+                <li><strong>Input validation and clear errors:</strong> Validates requests and returns helpful error messages when something is missing or invalid, instead of failing silently.</li>
+                <li><strong>Built-in documentation:</strong> Includes self-serve API documentation pages (Swagger UI and ReDoc) so the service is easier to understand, test and maintain.</li>
+            </ul>
+
             <div class="tech-stack">
                 <span class="tech-badge">Backend API</span>
                 <span class="tech-badge">AI Integration</span>
@@ -39,25 +61,13 @@
         </div>
         
         <div class="section">
-            <h2>What It Does</h2>
-            <ul class="feature-list">
-                <li>Retrieves <strong>mobile applications (iOS and Android)</strong> associated with a company</li>
-                <li>Identifies <strong>API endpoints and related assets</strong> for a given URL</li>
-                <li>Returns <strong>structured, explainable asset data</strong> suitable for downstream scope definition</li>
-            </ul>
-
-            <p class="note">
-                <strong>Note:</strong> This API does not generate scope documents. It provides the asset intelligence needed to define scope accurately.
-            </p>
-        </div>
-        
-        <div class="section">
-            <h2>Key Technical Decisions</h2>
-            <ul class="feature-list">
-                <li><strong>Deterministic discovery first:</strong>  Asset retrieval uses explicit logic and heuristics before any AI involvement</li>
-                <li><strong>Controlled AI usage:</strong>  AI is used only where reasoning is required, not for guessing or discovery</li>
-                <li><strong>Shared mobile discovery architecture:</strong>  iOS and Android logic implemented via a shared delegate pattern to reduce duplication and keep behaviour consistent</li>
-                <li><strong>Config-driven behaviour:</strong>  Discovery rules and thresholds are configurable, allowing safe extension without breaking existing logic</li>
+            <h3>Design Principles</h3>
+            <ul class="project-snapshot">
+                <li><strong>Deterministic discovery first:</strong> Asset retrieval follows clear, rule-based logic before any AI involvement, ensuring consistent and repeatable results.</li>
+                <li><strong>Reliable asset intelligence:</strong> Returns clear, consistent results so scope decisions are based on verified information rather than guesswork.</li>
+                <li><strong>Controlled AI usage:</strong> AI is applied only where reasoning adds value, reducing the risk of inaccurate or speculative results.</li>
+                <li><strong>Consistent mobile discovery:</strong> Shared logic across iOS and Android keeps behaviour aligned and reduces duplication, improving maintainability and reliability.</li>
+                <li><strong>Config-driven behaviour:</strong> Discovery rules and thresholds are configurable, allowing safe extension of the system without breaking existing logic.</li>
             </ul>
         </div>
     </div>
