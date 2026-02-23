@@ -39,18 +39,16 @@
                 >
                 Bug Bounty Scope Builder
             </h2>
-
-            <p class="subtitle">Web application that retrieves mobile apps and APIs using a custom-built API,
-            then constructs a bug bounty program scope from the URL, discovered assets and selected rewards.</p>
-            <p class="intro">Reduces manual reconnaissance effort, produces more accurate scopes and demonstrates disciplined AI-assisted development with strong architectural control.</p>
+            
+            <p class="subtitle">Web application that automatically builds a structured bug bounty scope for a company. It discovers official mobile apps, identifies likely public <span title="Application Programming Interface – a software interface that allows systems to communicate and exchange data">APIs</span> and generates a professional scope document in minutes.</p>
+            <p class="intro">Reduces manual reconnaissance effort, improves scope accuracy and uses AI to enhance results.</p>
             <ul class="project-snapshot">
-                <li><strong>Modules:</strong> 5 separate modules instead of one large file, making the system easier to maintain and extend.</li>
-                <li><strong>Config-driven:</strong> Key content and rules stored in 3 JSON files so updates can be made without rewriting core code.</li>
-                <li><strong>Integrations:</strong> Connects to a custom API that retrieves data and includes an AI recommendation automatically in the generated scope.</li>
-                <li><strong>Reliability:</strong> Built-in error handling so the program continues working safely if an external service fails.</li>
-                <li><strong>State management:</strong> Saves user input automatically to prevent lost work.</li>
+                <li><strong>Mobile Apps:</strong> When a company website is entered, official Apple App Store and Google Play apps are automatically discovered and included in the generated scope.</li>
+                <li><strong>API Discovery:</strong> If a company has a public API, the web is searched for likely endpoints and the strongest candidates are passed to AI to identify the most probable official API.</li>
                 <li><strong>Editor:</strong> Allows bold, italic and structured formatting so the final scope reads like a professional document rather than plain text.</li>
-                <li><strong>Codebase:</strong> 15 organised source files, approximately 3.7k lines of code.</li>
+                <li><strong>Auto Save:</strong> Saves user input automatically to prevent lost work.</li>
+                <li><strong>Configurable:</strong> Scope text and reward tiers can be changed easily without impacting the program.</li>
+                <li><strong>Reliability:</strong> Built-in error handling so the program continues working safely if an external service fails.</li>
             </ul>
 
             <a href="project-scope-builder-api.html" class="project-link">
@@ -63,6 +61,19 @@
                 <span class="tech-badge">System Architecture</span>
                 <span class="tech-badge">Configuration-Driven Design</span>
             </div>
+        </div>
+        <div class="section">
+            <h3>Technical Information</h3>
+            <ul class="project-snapshot">
+                <li><strong>Integrations:</strong> Connects to a custom API that retrieves data and includes an AI recommendation automatically in the generated scope.</li>
+                <li><strong>Modules:</strong> 5 separate modules instead of one large file, making the system easier to maintain and extend.</li>
+                <li><strong>Deterministic scope generation:</strong> Builds the scope using defined templates and rules, keeping output consistent and repeatable.</li>
+                <li><strong>Config-driven behaviour:</strong> Scope content, rewards and discovery rules are stored in JSON so changes can be made safely without rewriting core logic.</li>
+                <li><strong>Controlled AI usage:</strong> Uses AI only where reasoning adds value (recommendations), reducing speculative output and keeping results reliable.</li>
+                <li><strong>Resilient by design:</strong> If external services fail, the UI handles errors cleanly and continues operating safely without breaking the user flow.</li>
+                <li><strong>State-first UX:</strong> Automatically saves progress to prevent lost work and reduce user frustration during longer scope builds.</li>
+                <li><strong>Codebase:</strong> 15 organised source files, approximately 3.7k lines of code.</li>
+            </ul>
         </div>
 
         <div class="section">
