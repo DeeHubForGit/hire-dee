@@ -6,6 +6,28 @@
     <title>Auto-Man - Hire Dee - Brilliant Solutions</title>
     <link rel="icon" type="image/svg+xml" href="light-bulb-outline.svg">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-summary {
+            padding: 0;
+            margin: 18px 0 6px;
+            }
+
+        .project-snapshot {
+            list-style: disc;
+            padding-left: 1.2rem;
+            margin: 1.5rem 0;
+        }
+
+        .project-snapshot li {
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .project-snapshot li strong {
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
     <div id="header"></div>
@@ -26,6 +48,16 @@
             <p class="subtitle">
                 A full-featured web application built to support a local driving school with online lesson bookings, client management and calendar integration.
             </p>
+            <div class="project-summary">
+                <ul class="project-snapshot">
+                    <li><strong>Online Booking:</strong> Students can book lessons directly through the website with real-time availability.</li>
+                    <li><strong>Client Portal:</strong> Learners can view upcoming lessons, update details and track their progress.</li>
+                    <li><strong>Instructor Dashboard:</strong> Admin interface to manage bookings, clients and schedules in one place.</li>
+                    <li><strong>Automated Reminders:</strong> SMS and email confirmations help reduce missed lessons.</li>
+                    <li><strong>Calendar Sync:</strong> Bookings automatically appear in Google Calendar to avoid double bookings.</li>
+                    <li><strong>Mobile Friendly:</strong> Designed for real users on phones, tablets and desktop devices.</li>
+                </ul>
+            </div>
 
             <div class="tech-stack">
                 <span class="tech-badge">HTML/CSS</span>
@@ -37,7 +69,7 @@
         </div>
         <div class="section">
             <h3>Technical Information</h3>
-            <ul class="project-snapshot">
+            <ul>
                 <li><strong>Architecture:</strong> Full-stack web application with separated public site, client portal and admin dashboard layers.</li>
                 <li><strong>Backend:</strong> Supabase (PostgreSQL) with row-level security, structured schema design and controlled data access.</li>
                 <li><strong>Authentication:</strong> Secure user authentication with protected routes and role-based access control.</li>
