@@ -51,8 +51,8 @@
             <div class="project-summary">
                 <ul class="project-snapshot">
                     <li><strong>Online Booking:</strong> Students can book lessons directly through the website with real-time availability.</li>
-                    <li><strong>Client Portal:</strong> Learners can view upcoming lessons, update details and track their progress.</li>
-                    <li><strong>Instructor Dashboard:</strong> Admin interface to manage bookings, clients and schedules in one place.</li>
+                    <li><strong>Client Portal:</strong> Learners can view upcoming lessons, complete intake, update details and messages.</li>
+                    <li><strong>Admin Dashboard:</strong> Admin interface to manage bookings, clients and schedules in one place.</li>
                     <li><strong>Automated Reminders:</strong> SMS and email confirmations help reduce missed lessons.</li>
                     <li><strong>Calendar Sync:</strong> Bookings automatically appear in Google Calendar to avoid double bookings.</li>
                     <li><strong>Mobile Friendly:</strong> Designed for real users on phones, tablets and desktop devices.</li>
@@ -60,11 +60,11 @@
             </div>
 
             <div class="tech-stack">
-                <span class="tech-badge">HTML/CSS</span>
-                <span class="tech-badge">TypeScript</span>
-                <span class="tech-badge">JavaScript</span>
-                <span class="tech-badge">PL/pgSQL</span>
-                <span class="tech-badge">Google Calendar API</span>
+                <span class="tech-badge">Booking</span>
+                <span class="tech-badge">Google Calendar Sync</span>
+                <span class="tech-badge">Client Portal</span>
+                <span class="tech-badge">Admin Dashboard</span>
+                <span class="tech-badge">SMS/Email Notifications</span>
             </div>
         </div>
         <div class="section">
@@ -74,11 +74,20 @@
                 <li><strong>Backend:</strong> Supabase (PostgreSQL) with row-level security, structured schema design and controlled data access.</li>
                 <li><strong>Authentication:</strong> Secure user authentication with protected routes and role-based access control.</li>
                 <li><strong>Calendar Integration:</strong> Bi-directional Google Calendar sync to manage bookings and prevent scheduling conflicts.</li>
+                <li><strong>Address Validation:</strong> Google Maps API integration to validate and standardise pickup addresses, reducing incorrect bookings and preventing wasted instructor travel time.</li>
                 <li><strong>State Management:</strong> Persistent client and booking state handling with validation to maintain data integrity.</li>
                 <li><strong>Messaging Integrations:</strong> Automated email (Resend) and SMS (ClickSend) notifications triggered by booking events.</li>
                 <li><strong>Error Handling:</strong> Defensive validation and structured error responses to prevent broken booking flows.</li>
                 <li><strong>Codebase:</strong> 81 source files, approximately 30k lines across 43 HTML, 27 TypeScript, 9 JavaScript, 1 CSS and 1 SQL file.</li>
             </ul>
+
+            <div class="tech-stack">
+                <span class="tech-badge">Supabase</span>
+                <span class="tech-badge">Google Calendar API</span>
+                <span class="tech-badge">Google Maps API</span>
+                <span class="tech-badge">ClickSend (SMS)</span>
+                <span class="tech-badge">Resend (Email)</span>
+            </div>
         </div>
         <div class="section">
             <h3>Main Website</h3>
