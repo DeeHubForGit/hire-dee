@@ -259,18 +259,18 @@ h1, h2, h3 {
   color: #ffffff;
   text-decoration: none;
 
-  background-color: #7c3aed; /* purple */
+  background-color: #0A66C2; /* LinkedIn blue */
 
   box-shadow:
     0 0 0 1px rgba(255,255,255,0.18) inset,
     0 6px 16px rgba(0,0,0,0.25);
 
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
 .hd-linkedin-btn:hover,
 .hd-linkedin-btn:focus {
-  background-color: #6d28d9; /* optional, still solid */
+  background-color: #004182; /* optional, still solid */
   transform: translateY(-1px);
   box-shadow:
     0 0 0 1px rgba(255,255,255,0.25) inset,
