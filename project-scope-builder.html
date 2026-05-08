@@ -22,6 +22,18 @@
         .project-snapshot li strong {
             font-weight: 600;
         }
+
+        .scope-project-title a,
+        .scope-project-title a:visited,
+        .scope-project-title a:hover,
+        .scope-project-title a:active {
+            color: #f5f5f5;
+            text-decoration: none;
+        }
+
+        .scope-project-title a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -37,7 +49,9 @@
                     alt="Scope document icon"
                     class="scope-project-icon"
                 >
-                Bug Bounty Scope Builder
+                <a href="https://deehubforgit.github.io/bug-bounty-scope-builder/" target="_blank" rel="noopener noreferrer">
+                    Bug Bounty Scope Builder
+                </a>
             </h2>
             
             <p class="subtitle">Web application that automatically builds a structured bug bounty scope for a company. It discovers official mobile apps, identifies likely public <span title="Application Programming Interface – a software interface that allows systems to communicate and exchange data">APIs</span> and generates a professional scope document in minutes.</p>
@@ -50,6 +64,10 @@
                 <li><strong>Configurable:</strong> Scope text and reward tiers can be changed easily without impacting the program.</li>
                 <li><strong>Reliability:</strong> Built-in error handling so the program continues working safely if an external service fails.</li>
             </ul>
+
+            <p class="project-note">
+                <strong>Note:</strong> The live demo currently shows the interface and scope generation flow only. Mobile app and API retrieval are temporarily unavailable because the backend API is not deployed.
+            </p>
 
             <a href="project-scope-builder-api.html" class="project-link">
                 View Supporting API Project <span class="skill-link-arrow" aria-hidden="true"></span>

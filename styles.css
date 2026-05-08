@@ -697,6 +697,20 @@ h1, h2, h3 {
   text-decoration: none;
 }
 
+.project-note {
+    margin: 1.25rem 0 1.1rem 0;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(113, 92, 255, 0.45);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.04);
+    color: rgba(255,255,255,0.92);
+    line-height: 1.6;
+}
+
+.project-note strong {
+    color: #ffffff;
+}
+
 .project-image {
   filter: brightness(0.96) contrast(0.98);
 }
